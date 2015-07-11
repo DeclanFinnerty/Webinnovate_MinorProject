@@ -28,21 +28,4 @@ while($row = $result->fetch_assoc()){
 
 $result->free();
 
-//Get user details from client
-$usrName = "ABC";
-$usrName = $_POST['userName'];
-$county = $_POST['county'];
-echo "------" . $usrName . "_____";
-//Put client details in database
-$sql = "INSERT INTO user_info (UserName, County)
-VALUES ('" . $usrName . "', '" . $county . "')";
-
-if ($link->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $link->error;
-}
-
-$link->close();
-
 ?>
