@@ -1,48 +1,21 @@
 <?php
+	include 'ConnectToDB.php';
 
-	define('DB_NAME', 'minor_db');
-	define('DB_USER', 'root');
-	define('PASSWORD', '');
-	define('DB_HOST', 'localhost');
+	//Get user details from client
+	$usrName = $_POST['userName'];
+	$county = $_POST['county'];
+	
+	//Put client details in database
+	$sql = "INSERT INTO user_info (UserName, County)
+	VALUES ('" . $usrName . "', '" . $county . "')";
 
-	$link = mysqli_connect(DB_HOST, DB_USER, PASSWORD, DB_NAME);
-
-	if($link->connect_errno > 0)
+	if ($db->query($sql) === TRUE) 
 	{
-    	die('Unable to connect to database [' . $link->connect_error . ']');
+	    echo "New record created successfully";
+	} 
+	else
+	{
+	    echo "Error: " . $sql . "<br>" . $db->error;
 	}
-
-$sql = "SELECT * FROM user_info;";
-
-if(!$result = $link->query($sql)){
-    die('There was an error running the query [' . $link->error . ']');
-}
-
-while($row = $result->fetch_assoc()){
-    echo implode("  ",$row) . '<br />';
-
-    echo $row['ID'] . '<br />';
-    echo $row['UserName'] . '<br />';
-    echo $row['County'] . '<br />';
-}
-
-$result->free();
-
-//Get user details from client
-$usrName = "ABC";
-$usrName = $_POST['userName'];
-$county = $_POST['county'];
-echo "------" . $usrName . "_____";
-//Put client details in database
-$sql = "INSERT INTO user_info (UserName, County)
-VALUES ('" . $usrName . "', '" . $county . "')";
-
-if ($link->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $link->error;
-}
-
-$link->close();
 
 ?>

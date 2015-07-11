@@ -5,27 +5,29 @@
 	define('PASSWORD', '');
 	define('DB_HOST', 'localhost');
 
-	$link = mysqli_connect(DB_HOST, DB_USER, PASSWORD, DB_NAME);
+	$db = mysqli_connect(DB_HOST, DB_USER, PASSWORD, DB_NAME);
 
-	if($link->connect_errno > 0)
+	if($db->connect_errno > 0)
 	{
-    	die('Unable to connect to database [' . $link->connect_error . ']');
+    	die('Unable to connect to database [' . $db->connect_error . ']');
 	}
 
-$sql = "SELECT * FROM user_info;";
+	/*
+		$sql = "SELECT * FROM user_info;";
 
-if(!$result = $link->query($sql)){
-    die('There was an error running the query [' . $link->error . ']');
-}
+		if(!$result = $db->query($sql)){
+		    die('There was an error running the query [' . $db->error . ']');
+		}
 
-while($row = $result->fetch_assoc()){
-    echo implode("  ",$row) . '<br />';
+		while($row = $result->fetch_assoc()){
+		    echo implode("  ",$row) . '<br />';
 
-    echo $row['ID'] . '<br />';
-    echo $row['UserName'] . '<br />';
-    echo $row['County'] . '<br />';
-}
+		    echo $row['ID'] . '<br />';
+		    echo $row['UserName'] . '<br />';
+		    echo $row['County'] . '<br />';
+		}
 
-$result->free();
+		$result->free();
+	*/
 
 ?>
