@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Quiz</title>
+
+		<link rel="stylesheet" type="text/css" href="myCSS.css">
+
+	</head>
+
+	<body>
+
+		<!-- Video for the Quiz -->
+		<video controls="controls" loop preload="none" poster="http://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Big_Buck_Bunny_Trailer_400p.ogg/500px-seek%3D14-Big_Buck_Bunny_Trailer_400p.ogg.jpg" >
+			<source src="assets/video/WebM_Bunny.webm" type="video/webm"/>
+			<source src="assets/video/OGV_Bunny.ogv" type="video/ogg"/>
+			<source src="assets/video/MP4_Bunny.mp4" type="video/mp4"/>
+		</video>
+
+		<!-- The Quiz form -->
+
+		<form action="Quiz_script.php" method="post">
+
+
+		<!-- Question 1 -->
+		<fieldset>
+			<legend>Question 1</legend>
+
+			<p>
+				This is the first question
+			</p>
+
+			<!--
+			Radio buttons
+			-->
+			<p>
+				<label for="Question1AnsA">This is answer A:</label>
+				<input type="radio" id="Question1AnsA" name="Question1Ans" vale="Question1AnsA"><br>
+				<label for="Question1AnsB">This is answer B:</label>
+				<input type="radio" id="Question1AnsB" name="Question1Ans" vale="Question1AnsB"><br>
+				<label for="Question1AnsC">This is answer C:</label>
+				<input type="radio" id="Question1AnsC" name="Question1Ans" vale="Question1AnsC"><br>
+			</p>
+
+
+		</fieldset>
+
+
+
+		<!-- Question 2 -->
+		<fieldset>
+			<legend>Question 2</legend>
+
+			<p>
+				This is the second question
+			</p>
+
+			<!--
+			Radio buttons
+			-->
+			<p>
+				<label for="Question2AnsA">This is answer A:</label>
+				<input type="radio" id="Question2AnsA" name="Question2Ans" vale="Question2AnsA"><br>
+				<label for="Question2AnsB">This is answer B:</label>
+				<input type="radio" id="Question2AnsB" name="Question2Ans" vale="Question2AnsB"><br>
+				<label for="Question2AnsC">This is answer C:</label>
+				<input type="radio" id="Question2AnsC" name="Question2Ans" vale="Question2AnsC"><br>
+			</p>
+
+
+		</fieldset>
+
+		<p>
+			<input type="submit" name="SubmitQuiz">
+		</p>
+
+
+		</form>
+
+
+	</body>
+
+</html>

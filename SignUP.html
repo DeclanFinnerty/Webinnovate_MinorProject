@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Sign-up</title>
+
+		<link rel="stylesheet" type="text/css" href="myCSS.css">
+		 <script src="js/storeUsrLocaly.js"></script> 
+
+	</head>
+
+	<body>
+
+
+		<form action="SignIn_script.php" method="post">
+
+			<fieldset>
+				<legend>Sign in</legend>
+				
+				<p>
+					<label for="userName">UserName:</label>
+					<input type="text" id="userName" name="userName" autocomplete="on" required/>
+				</p>
+				<p>
+					<label for="county">County:</label>
+					<input type="text" id="county" name="county" autocomplete="on" required/>
+				</p>
+
+				<p>
+					<input type="submit" name="Submit" onclick="storeUsrLocaly()">
+				</p>
+
+			</fieldset>
+
+		</form>
+
+	</body>
+
+</html>

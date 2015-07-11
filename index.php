@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Sign-up</title>
+
+		<link rel="stylesheet" type="text/css" href="myCSS.css">
+		 <script src="js/storeUsrLocaly.js"></script> 
+
+	</head>
+
+	<body>
+		<a href="HomePage.html">HomePage</a>
+		<a href="SignUp.html">SignUp</a>
+		<a href="Quiz.html">Quiz</a>
+		<a href="Leaderboard.html">Leaderboard</a>
+	</body>
+
+</html>
