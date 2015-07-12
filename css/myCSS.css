@@ -1,4 +1,18 @@
 
+table
+{
+	border: 2px solid red;
+	background-color: #FFC;
+}
+th
+{
+	border-bottom: 5px solid #000;
+}
+td
+{
+	border-bottom: 2px solid #666;
+}
+
 nav
 {
 	border: 1px solid #888;

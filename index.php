@@ -15,7 +15,7 @@
 		<a href="HomePage.html">HomePage</a>
 		<a href="SignUp.html">SignUp</a>
 		<a href="Quiz.html">Quiz</a>
-		<a href="Leaderboard.html">Leaderboard</a>
+		<a href="Leaderboard.php">Leaderboard</a>
 	</body>
 
 </html>
