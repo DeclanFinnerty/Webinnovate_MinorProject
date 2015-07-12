@@ -6,7 +6,8 @@
 		<meta charset="utf-8"/>
 		<title>Quiz</title>
 
-		<link rel="stylesheet" type="text/css" href="myCSS.css">
+		<link rel="stylesheet" type="text/css" href="css/myCSS.css">
+		<script src="js/postToServer.js"></script> 
 
 	</head>
 
@@ -24,62 +25,80 @@
 
 		<form action="Quiz_script.php" method="post">
 
+			<input type="hidden" id="hiddenUsrName" name="userName">
+			<input type="hidden" id="hiddenUsrCounty" name="userCounty">
 
-		<!-- Question 1 -->
-		<fieldset>
-			<legend>Question 1</legend>
+			<!-- Question 1 -->
+			<fieldset>
+				<legend>Question 1</legend>
+
+				<p>
+					This is the first question
+				</p>
+
+				<!--
+				Radio buttons
+				-->
+				<p>
+					<label for="Question1AnsA">This is answer A:</label>
+					<input type="radio" id="Question1AnsA" name="Question1Ans" value="false" required><br>
+					<label for="Question1AnsB">This is answer B:</label>
+					<input type="radio" id="Question1AnsB" name="Question1Ans" value="true" required><br>
+					<label for="Question1AnsC">This is answer C:</label>
+					<input type="radio" id="Question1AnsC" name="Question1Ans" value="false" required><br>
+				</p>
+
+
+			</fieldset>
+
+
+
+			<!-- Question 2 -->
+			<fieldset>
+				<legend>Question 2</legend>
+
+				<p>
+					This is the second question
+				</p>
+
+				<!--
+				Radio buttons
+				-->
+				<p>
+					<label for="Question2AnsA">This is answer A:</label>
+					<input type="radio" id="Question2AnsA" name="Question2Ans" value="true" required><br>
+					<label for="Question2AnsB">This is answer B:</label>
+					<input type="radio" id="Question2AnsB" name="Question2Ans" value="false" required><br>
+					<label for="Question2AnsC">This is answer C:</label>
+					<input type="radio" id="Question2AnsC" name="Question2Ans" value="false" required><br>
+				</p>
+
+
+			</fieldset>
 
 			<p>
-				This is the first question
+				<input type="submit" name="SubmitQuiz" onclick="addUsrDataToForm()">
 			</p>
-
-			<!--
-			Radio buttons
-			-->
-			<p>
-				<label for="Question1AnsA">This is answer A:</label>
-				<input type="radio" id="Question1AnsA" name="Question1Ans" vale="Question1AnsA" required><br>
-				<label for="Question1AnsB">This is answer B:</label>
-				<input type="radio" id="Question1AnsB" name="Question1Ans" vale="Question1AnsB" required><br>
-				<label for="Question1AnsC">This is answer C:</label>
-				<input type="radio" id="Question1AnsC" name="Question1Ans" vale="Question1AnsC" required><br>
-			</p>
-
-
-		</fieldset>
-
-
-
-		<!-- Question 2 -->
-		<fieldset>
-			<legend>Question 2</legend>
-
-			<p>
-				This is the second question
-			</p>
-
-			<!--
-			Radio buttons
-			-->
-			<p>
-				<label for="Question2AnsA">This is answer A:</label>
-				<input type="radio" id="Question2AnsA" name="Question2Ans" vale="Question2AnsA" required><br>
-				<label for="Question2AnsB">This is answer B:</label>
-				<input type="radio" id="Question2AnsB" name="Question2Ans" vale="Question2AnsB" required><br>
-				<label for="Question2AnsC">This is answer C:</label>
-				<input type="radio" id="Question2AnsC" name="Question2Ans" vale="Question2AnsC" required><br>
-			</p>
-
-
-		</fieldset>
-
-		<p>
-			<input type="submit" name="SubmitQuiz">
-		</p>
 
 
 		</form>
 
+		<script type="text/javascript">
+			function addUsrDataToForm()
+			{
+				//Get user name and county from local storage
+				var currentUsr= localStorage.getItem("userName");
+				var currentUsrCounty= localStorage.getItem("userCounty");
+
+				//Add username to form
+				var hiddenUsrName = document.getElementById("hiddenUsrName");
+	            hiddenUsrName.setAttribute("value", currentUsr);
+
+				//Add userCounty to form
+				var hiddenUsrCounty = document.getElementById("hiddenUsrCounty");
+	            hiddenUsrCounty.setAttribute("value", currentUsrCounty);
+			}
+		</script>
 
 	</body>
 

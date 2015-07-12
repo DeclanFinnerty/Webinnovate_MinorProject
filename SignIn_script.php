@@ -3,7 +3,7 @@
 
 	//Get user details from client
 	$usrName = $_POST['userName'];
-	$county = $_POST['county'];
+	$county = $_POST['userCounty'];
 	
 	//Put client details in database
 	$sql = "INSERT INTO user_info (UserName, County)

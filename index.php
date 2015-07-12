@@ -6,7 +6,7 @@
 		<meta charset="utf-8"/>
 		<title>Sign-up</title>
 
-		<link rel="stylesheet" type="text/css" href="myCSS.css">
+		<link rel="stylesheet" type="text/css" href="css/myCSS.css">
 		 <script src="js/storeUsrLocaly.js"></script> 
 
 	</head>
