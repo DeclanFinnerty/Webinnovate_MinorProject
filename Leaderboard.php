@@ -6,7 +6,7 @@
 		<meta charset="utf-8"/>
 		<title>Leaderboard</title>
 
-		<link rel="stylesheet" type="text/css" href="css/myCSS.css">
+		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
 
 	</head>
 
