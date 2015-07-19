@@ -6,7 +6,7 @@
 		<meta charset="utf-8"/>
 		<title>Quiz</title>
 
-		<link rel="stylesheet" type="text/css" href="css/myCSS.css">
+		<link rel="stylesheet" type="text/css" href="css/quiz_style.css">
 		<script src="js/postToServer.js"></script> 
 
 	</head>
@@ -14,74 +14,75 @@
 	<body>
 		<a href="index.php">index</a>
 
-		<!-- Video for the Quiz -->
-		<video controls="controls" loop preload="none" poster="http://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Big_Buck_Bunny_Trailer_400p.ogg/500px-seek%3D14-Big_Buck_Bunny_Trailer_400p.ogg.jpg" >
-			<source src="assets/video/WebM_Bunny.webm" type="video/webm"/>
-			<source src="assets/video/OGV_Bunny.ogv" type="video/ogg"/>
-			<source src="assets/video/MP4_Bunny.mp4" type="video/mp4"/>
-		</video>
+		<div class="container">
+			<!-- Video for the Quiz -->
+			<div class="quizVideo" >
+				<iframe width="420" height="315" src="http://www.youtube.com/embed/sAKyhfxxr7s?autoplay=0"></iframe>
+			</div>
 
-		<!-- The Quiz form -->
+			<!-- The Quiz form -->
 
-		<form action="Quiz_script.php" method="post">
+			<form class="quizQuestions" action="Quiz_script.php" method="post">
 
-			<input type="hidden" id="hiddenUsrName" name="userName">
-			<input type="hidden" id="hiddenUsrCounty" name="userCounty">
+				<input type="hidden" id="hiddenUsrName" name="userName">
+				<input type="hidden" id="hiddenUsrCounty" name="userCounty">
 
-			<!-- Question 1 -->
-			<fieldset>
-				<legend>Question 1</legend>
+				<!-- Question 1 -->
+				<fieldset>
+					<legend>Question 1</legend>
+
+					<p>
+						This is the first question
+					</p>
+
+					<!--
+					Radio buttons
+					-->
+					<p>
+						<label for="Question1AnsA">This is answer A:</label>
+						<input type="radio" id="Question1AnsA" name="Question1Ans" value="false" required><br>
+						<label for="Question1AnsB">This is answer B:</label>
+						<input type="radio" id="Question1AnsB" name="Question1Ans" value="true" required><br>
+						<label for="Question1AnsC">This is answer C:</label>
+						<input type="radio" id="Question1AnsC" name="Question1Ans" value="false" required><br>
+					</p>
+
+
+				</fieldset>
+
+
+
+				<!-- Question 2 -->
+				<fieldset>
+					<legend>Question 2</legend>
+
+					<p>
+						This is the second question
+					</p>
+
+					<!--
+					Radio buttons
+					-->
+					<p>
+						<label for="Question2AnsA">This is answer A:</label>
+						<input type="radio" id="Question2AnsA" name="Question2Ans" value="true" required><br>
+						<label for="Question2AnsB">This is answer B:</label>
+						<input type="radio" id="Question2AnsB" name="Question2Ans" value="false" required><br>
+						<label for="Question2AnsC">This is answer C:</label>
+						<input type="radio" id="Question2AnsC" name="Question2Ans" value="false" required><br>
+					</p>
+
+
+				</fieldset>
 
 				<p>
-					This is the first question
-				</p>
-
-				<!--
-				Radio buttons
-				-->
-				<p>
-					<label for="Question1AnsA">This is answer A:</label>
-					<input type="radio" id="Question1AnsA" name="Question1Ans" value="false" required><br>
-					<label for="Question1AnsB">This is answer B:</label>
-					<input type="radio" id="Question1AnsB" name="Question1Ans" value="true" required><br>
-					<label for="Question1AnsC">This is answer C:</label>
-					<input type="radio" id="Question1AnsC" name="Question1Ans" value="false" required><br>
+					<input type="submit" name="SubmitQuiz" onclick="addUsrDataToForm()">
 				</p>
 
 
-			</fieldset>
+			</form>
 
-
-
-			<!-- Question 2 -->
-			<fieldset>
-				<legend>Question 2</legend>
-
-				<p>
-					This is the second question
-				</p>
-
-				<!--
-				Radio buttons
-				-->
-				<p>
-					<label for="Question2AnsA">This is answer A:</label>
-					<input type="radio" id="Question2AnsA" name="Question2Ans" value="true" required><br>
-					<label for="Question2AnsB">This is answer B:</label>
-					<input type="radio" id="Question2AnsB" name="Question2Ans" value="false" required><br>
-					<label for="Question2AnsC">This is answer C:</label>
-					<input type="radio" id="Question2AnsC" name="Question2Ans" value="false" required><br>
-				</p>
-
-
-			</fieldset>
-
-			<p>
-				<input type="submit" name="SubmitQuiz" onclick="addUsrDataToForm()">
-			</p>
-
-
-		</form>
+		</div>
 
 		<script type="text/javascript">
 			function addUsrDataToForm()
