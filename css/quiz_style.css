@@ -14,9 +14,9 @@
 .quizContainer
 {
 	display: flex;
-	flex-direction: row;
+	flex-flow: col;
 	display: -webkit-flex;
-	-webkit-flex-direction: row;
+	-webkit-flex-flow: row;
 
 	background: #0000ff;
 	padding: 15px 15px 15px 15px;
@@ -37,3 +37,5 @@
 	border: 4px dashed black;
 
 }
+
+
