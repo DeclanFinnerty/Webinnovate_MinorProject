@@ -6,15 +6,19 @@
 		<meta charset="utf-8"/>
 		<title>Quiz</title>
 
+
 		<link rel="stylesheet" type="text/css" href="css/quiz_style.css">
+		<link rel="stylesheet" media="(max-width: 600px)" type="text/css" href="css/quiz_styleMobile.css">
 		<script src="js/postToServer.js"></script> 
 
 	</head>
 
 	<body>
+
+		<div id="containerc">
+
 		<a href="index.php">index</a>
 
-		<div class="container">
 
 			<!-- The Quiz form -->
 
@@ -25,116 +29,127 @@
 
 				<!-- Quiz 1 -->
 
+			<div class="container">
+
 				<!-- Video Quiz 1 -->
-				<iframe id="quiz1Video" class="quizVideo"  width="420" height="315" src="http://www.youtube.com/embed/sAKyhfxxr7s?autoplay=0"></iframe>
-
-				<!-- Quiz 1 questions -->
-				<div id="quiz1Questions" class="quizQuestions">
-					<!-- Question 1 -->
-					<fieldset>
-						<legend>Question 1</legend>
-
-						<p>
-							This is the first question
-						</p>
-
-						<!--
-						Radio buttons
-						-->
-						<p>
-							<label for="Quiz1Q1AnsA">This is answer A:</label>
-							<input type="radio" id="Quiz1Q1AnsA" name="Quiz1Q1Ans" value="true" required><br>
-							<label for="Quiz1Q1AnsB">This is answer B:</label>
-							<input type="radio" id="Quiz1Q1AnsB" name="Quiz1Q1Ans" value="false" required><br>
-							<label for="Quiz1Q1AnsC">This is answer C:</label>
-							<input type="radio" id="Quiz1Q1AnsC" name="Quiz1Q1Ans" value="false" required><br>
-						</p>
+			<div class="quizContainer">
+					<iframe id="quiz1Video" class="quizEllement"  width="420" height="315" src="http://www.youtube.com/embed/sAKyhfxxr7s?autoplay=0"></iframe>
 
 
-					</fieldset>
+						<!-- Quiz 1 questions -->
+						<div id="quiz1Questions" class="quizEllement">
+							<!-- Question 1 -->
+							<fieldset>
+								<legend>Question 1</legend>
+
+								<p>
+									This is the first question
+								</p>
+
+								<!--
+								Radio buttons
+								-->
+								<p>
+									<label for="Quiz1Q1AnsA">This is answer A:</label>
+									<input type="radio" id="Quiz1Q1AnsA" name="Quiz1Q1Ans" value="true" required><br>
+									<label for="Quiz1Q1AnsB">This is answer B:</label>
+									<input type="radio" id="Quiz1Q1AnsB" name="Quiz1Q1Ans" value="false" required><br>
+									<label for="Quiz1Q1AnsC">This is answer C:</label>
+									<input type="radio" id="Quiz1Q1AnsC" name="Quiz1Q1Ans" value="false" required><br>
+								</p>
+
+
+							</fieldset>
 
 
 
-					<!-- Question 2 -->
-					<fieldset>
-						<legend>Question 2</legend>
+							<!-- Question 2 -->
+							<fieldset>
+								<legend>Question 2</legend>
 
-						<p>
-							This is the second question
-						</p>
+								<p>
+									This is the second question
+								</p>
 
-						<!--
-						Radio buttons
-						-->
-						<p>
-							<label for="Quiz1Q2AnsA">This is answer A:</label>
-							<input type="radio" id="Quiz1Q2AnsA" name="Quiz1Q2Ans" value="false" required><br>
-							<label for="Quiz1Q2AnsB">This is answer B:</label>
-							<input type="radio" id="Quiz1Q2AnsB" name="Quiz1Q2Ans" value="true" required><br>
-							<label for="Quiz1Q2AnsC">This is answer C:</label>
-							<input type="radio" id="Quiz1Q2AnsC" name="Quiz1Q2Ans" value="false" required><br>
-						</p>
+								<!--
+								Radio buttons
+								-->
+								<p>
+									<label for="Quiz1Q2AnsA">This is answer A:</label>
+									<input type="radio" id="Quiz1Q2AnsA" name="Quiz1Q2Ans" value="false" required><br>
+									<label for="Quiz1Q2AnsB">This is answer B:</label>
+									<input type="radio" id="Quiz1Q2AnsB" name="Quiz1Q2Ans" value="true" required><br>
+									<label for="Quiz1Q2AnsC">This is answer C:</label>
+									<input type="radio" id="Quiz1Q2AnsC" name="Quiz1Q2Ans" value="false" required><br>
+								</p>
 
 
-					</fieldset>
+							</fieldset>
 
-				</div>
+						</div>
+					</div>
 
 				<!-- Quiz 2-->
 				<!-- Quiz 2 video-->
-				<iframe id="quiz2Video" class="quizVideo"  width="420" height="315" src="http://www.youtube.com/embed/ysIm7ImsK6c?autoplay=0"></iframe>
+				<div class="quizContainer">
 
-				<!-- Quiz 2 questions -->
-				<div id="quiz2Questions" class="quizQuestions">
-					<!-- Question 1 -->
-					<fieldset>
-						<legend>Question 1</legend>
-
-						<p>
-							This is the first question
-						</p>
-
-						<!--
-						Radio buttons
-						-->
-						<p>
-							<label for="Quiz2Q1AnsA">This is answer A:</label>
-							<input type="radio" id="Quiz2Q1AnsA" name="Quiz2Q1Ans" value="false" required><br>
-							<label for="Quiz2Q1AnsB">This is answer B:</label>
-							<input type="radio" id="Quiz2Q1AnsB" name="Quiz2Q1Ans" value="false" required><br>
-							<label for="Quiz2Q1AnsC">This is answer C:</label>
-							<input type="radio" id="Quiz2Q1AnsC" name="Quiz2Q1Ans" value="true" required><br>
-						</p>
+					<iframe id="quiz2Video" class="quizEllement"  width="420" height="315" src="http://www.youtube.com/embed/ysIm7ImsK6c?autoplay=0"></iframe>
 
 
-					</fieldset>
+					<!-- Quiz 2 questions -->
+					<div id="quiz2Questions" class="quizEllement">
+						<!-- Question 1 -->
+						<fieldset>
+							<legend>Question 1</legend>
+
+							<p>
+								This is the first question
+							</p>
+
+							<!--
+							Radio buttons
+							-->
+							<p>
+								<label for="Quiz2Q1AnsA">This is answer A:</label>
+								<input type="radio" id="Quiz2Q1AnsA" name="Quiz2Q1Ans" value="false" required><br>
+								<label for="Quiz2Q1AnsB">This is answer B:</label>
+								<input type="radio" id="Quiz2Q1AnsB" name="Quiz2Q1Ans" value="false" required><br>
+								<label for="Quiz2Q1AnsC">This is answer C:</label>
+								<input type="radio" id="Quiz2Q1AnsC" name="Quiz2Q1Ans" value="true" required><br>
+							</p>
+
+
+						</fieldset>
 
 
 
-					<!-- Question 2 -->
-					<fieldset>
-						<legend>Question 2</legend>
+						<!-- Question 2 -->
+						<fieldset>
+							<legend>Question 2</legend>
 
-						<p>
-							This is the second question
-						</p>
+							<p>
+								This is the second question
+							</p>
 
-						<!--
-						Radio buttons
-						-->
-						<p>
-							<label for="Quiz2Q2AnsA">This is answer A:</label>
-							<input type="radio" id="Quiz2Q2AnsA" name="Quiz2Q2Ans" value="false" required><br>
-							<label for="Quiz2Q2AnsB">This is answer B:</label>
-							<input type="radio" id="Quiz2Q2AnsB" name="Quiz2Q2Ans" value="false" required><br>
-							<label for="Quiz2Q2AnsC">This is answer C:</label>
-							<input type="radio" id="Quiz2Q2AnsC" name="Quiz2Q2Ans" value="true" required><br>
-						</p>
+							<!--
+							Radio buttons
+							-->
+							<p>
+								<label for="Quiz2Q2AnsA">This is answer A:</label>
+								<input type="radio" id="Quiz2Q2AnsA" name="Quiz2Q2Ans" value="false" required><br>
+								<label for="Quiz2Q2AnsB">This is answer B:</label>
+								<input type="radio" id="Quiz2Q2AnsB" name="Quiz2Q2Ans" value="false" required><br>
+								<label for="Quiz2Q2AnsC">This is answer C:</label>
+								<input type="radio" id="Quiz2Q2AnsC" name="Quiz2Q2Ans" value="true" required><br>
+							</p>
 
 
-					</fieldset>
+						</fieldset>
 
-				</div>
+					</div>
+				</div>	
+
+			</div>
 
 				<p>
 					<input type="submit" name="SubmitQuiz" onclick="addUsrDataToForm()">
@@ -142,8 +157,6 @@
 
 
 			</form>
-
-		</div>
 
 		<script type="text/javascript">
 			function addUsrDataToForm()
