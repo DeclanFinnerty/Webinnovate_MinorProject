@@ -13,34 +13,46 @@
 	<body>
 		<a href="index.php">index</a>
 
-		<h1>Display data from database</h1>
+		<div class="container">
+			
+			<h1 id="leaderboardH1">Leaderboard</h1>
 
-		<?php
-			include 'ConnectToDB.php';
+			<?php
+				include 'ConnectToDB.php';
 
-			$sqlget = "SELECT * FROM user_info ORDER BY -Score";
-			$sqldata = mysqli_query($db, $sqlget) or die('Error getting data from database');
+				$sqlget = "SELECT * FROM user_info ORDER BY -Score";
+				$sqldata = mysqli_query($db, $sqlget) or die('Error getting data from database');
 
-			echo "<table>";
-			echo "<tr><th>ID</th><th>UserName</th><th>County</th><th>Score</th></tr>";
+				echo "<table id='leaderboardTable'>";
+				echo "<tr><th>ID</th><th>UserName</th><th>County</th><th>Score</th></tr>";
 
-			while($row = mysqli_fetch_array($sqldata, MYSQL_ASSOC))
-			{
-				echo "<tr><td>";
-				echo $row['ID'];
-				echo "</td><td>";
-				echo $row['UserName'];
-				echo "</td><td>";
-				echo $row['County'];
-				echo "</td><td>";
-				echo $row['Score'];
-				echo "</td></tr>";
+				$count = 0;
+				while($row = mysqli_fetch_array($sqldata, MYSQL_ASSOC))
+				{
+					$count += 1;
+					if(($count % 2) == 0) 
+					{
+						echo "<tr><td>";
+					}
+					else
+					{
+						echo "<tr class='altRow'><td>";
+					}
 
-			}
+					echo $row['ID'];
+					echo "</td><td>";
+					echo $row['UserName'];
+					echo "</td><td>";
+					echo $row['County'];
+					echo "</td><td>";
+					echo $row['Score'];
+					echo "</td></tr>";
 
-			echo "</table>";
-		?>
+				}
 
+				echo "</table>";
+			?>
+	</div>
 	</body>
 
 </html>
