@@ -13,8 +13,14 @@ div.container
 
 h1#leaderboardH1
 {
-	display: inline;
 	background: #ff0000;
+    text-align: center;
+
+}
+
+h2#leaderboardH2
+{
+	background: #0000ff;
     text-align: center;
 
 }

@@ -14,7 +14,7 @@
 		<a href="index.php">index</a>
 
 		<div class="container">
-			
+
 			<h1 id="leaderboardH1">Leaderboard</h1>
 
 			<?php
@@ -50,7 +50,13 @@
 
 				}
 
+				if($count == 0)
+				{
+					echo "<tr><td colspan='4'>Leaderboard is empty</td></tr>";
+				}
+
 				echo "</table>";
+
 			?>
 	</div>
 	</body>
