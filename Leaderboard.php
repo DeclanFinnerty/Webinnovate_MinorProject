@@ -8,6 +8,9 @@
 
 		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
 
+		<link rel="stylesheet" media="only screen and (max-width: 1000px)" type="text/css" href="css/learderboard_styleMobile.css">
+		<link rel="stylesheet" media="only screen and (min-width: 1000px)" type="text/css" href="css/learderboard_style.css">
+
 	</head>
 
 	<body>
