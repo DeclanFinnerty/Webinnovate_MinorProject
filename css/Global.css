@@ -1,0 +1,61 @@
+/*		
+*	Author:	Robert Hunter
+*	Assignment:	Minor	Project	–	Eco Ninja, SxSW
+*	Date	:	12/07/15
+*	Ref:	
+*/
+
+/* Colour  Variables 
+
+	Use these colour variables throughout code to keep colours consitent
+*/
+
+.bg-greenDark { background-color: #197B30; }
+.bg-greenMedium { background-color: #15D000; }
+.bg-cream { background-color: #f4db97; }
+.bg-yellow { background-color: #FFF799; }
+.bg-brown { background-color: #3C2415}
+
+p {
+	/*color: green;*/
+}
+header {
+
+	background-color: green;
+}
+
+a {
+}
+
+footer {
+
+	background-color: yellow;
+}
+
+nav.topNav {
+}
+
+a.topNav {
+	color: #197B30;
+	text-decoration: none;
+}
+
+li.topNav:hover {
+	color: #FFF799;
+}
+
+li.topNav:active {
+	color: #FFF799; 
+}
+
+/* Styling for the main content area */
+
+p.mainContent {
+	color: black;
+}
+
+div.mainContent {
+	background-color: white;
+}
+
+
