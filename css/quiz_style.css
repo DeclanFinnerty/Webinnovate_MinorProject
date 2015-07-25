@@ -38,4 +38,22 @@
 
 }
 
+input{
+  float: right; 
+}
+
+
+#submitDiv
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submitBtn
+{
+	background-color: #ffff00;
+	text-align: center;
+	width: 90px;
+	height: 50px;
+}
 
