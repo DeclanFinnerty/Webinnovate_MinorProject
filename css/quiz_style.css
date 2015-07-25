@@ -2,7 +2,7 @@
 .container
 {
 
-	background: #ff0000;
+	background: #FFF799;
 	padding: 15px 15px 15px 15px;
 	margin: 20px;
 	border: 4px dashed black;
@@ -18,7 +18,7 @@
 	display: -webkit-flex;
 	-webkit-flex-flow: row;
 
-	background: #0000ff;
+	background: #3C2415;
 	padding: 15px 15px 15px 15px;
 	margin: 20px;
 	border: 4px dashed black;
@@ -31,7 +31,7 @@
 	flex: 1;
 	-webkit-flex: 1;
 
-	background: #00ff00;
+	background: #F4DB97;
 	padding: 15px 15px 15px 15px;
 	margin: 20px;
 	border: 4px dashed black;
