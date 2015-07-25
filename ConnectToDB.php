@@ -1,3 +1,7 @@
+<!--
+*	Author:	Declan Finnerty
+*	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
+-->
 <?php
 
 	define('DB_NAME', 'minor_db');

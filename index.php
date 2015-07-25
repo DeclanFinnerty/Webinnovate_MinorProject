@@ -1,3 +1,7 @@
+<!--
+*	Author:	Declan Finnerty
+*	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
+-->
 <!DOCTYPE HTML>
 
 <html lang="en-us">
