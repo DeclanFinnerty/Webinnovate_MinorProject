@@ -1,6 +1,8 @@
 <!--
 *	Author:	Declan Finnerty
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
+*
+* 	Connects to the database
 -->
 <?php
 	include 'ConnectToDB.php';

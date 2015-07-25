@@ -1,4 +1,14 @@
+/*      
+*   Author: Declan Finnerty
+*   Assignment: Minor   Project –   Eco Ninja, SxSW
+*
+* 	This file contains the styling for the quiz page
+*/
 
+
+/*
+    this is a div that contains all the quizs
+ */
 .container
 {
 
@@ -11,6 +21,9 @@
 }
 
 
+/*
+    this is a div that contains each quiz
+ */
 .quizContainer
 {
 	display: flex;
@@ -26,6 +39,9 @@
 	margin-right: auto;
 }
 
+/*
+	quizEllement could be a quiz video of the questions
+ */
 .quizEllement
 {
 	flex: 1;
@@ -38,17 +54,26 @@
 
 }
 
+/*
+	this keeps the radio buttons in line
+ */
 input{
   float: right; 
 }
 
 
+/*
+	the submit button for the quiz contained here
+ */
 #submitDiv
 {
     margin-left: auto;
     margin-right: auto;
 }
 
+/*
+	the styling for the submit button
+ */
 #submitBtn
 {
 	background-color: #FFF799;

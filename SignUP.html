@@ -1,8 +1,12 @@
 <!--
 *	Author:	Declan Finnerty
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
+*
+* 	A this file gets the users name and 
+* 	county and sends it to a php script 
+* 	which puts it into a database
+*	
 -->
-
 <!DOCTYPE HTML>
 
 <html lang="en-us">
@@ -20,6 +24,9 @@
 		<a href="index.php">index</a>
 
 
+		<!--
+			This form gets the users info
+		-->
 		<form action="SignIn_script.php" method="post">
 
 			<fieldset>
@@ -72,6 +79,11 @@
 				</select>
 			</p>
 
+				<!--
+					this submits sends the users info to the 
+					server to be put in a databaseand calls a 
+					js function that stores the info client side
+				-->
 				<p>
 					<input type="submit" name="Submit" onclick="storeUsrLocaly()">
 				</p>

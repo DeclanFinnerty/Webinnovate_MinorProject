@@ -1,4 +1,11 @@
+/*      
+*   Author: Declan Finnerty
+*   Assignment: Minor   Project –   Eco Ninja, SxSW
+*/
 
+/*
+	If the screen is too small keep the leaderboard 400px
+ */
 div.container
 {
     width: 400px;

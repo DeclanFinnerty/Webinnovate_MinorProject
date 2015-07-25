@@ -1,6 +1,14 @@
 <!--
 *	Author:	Declan Finnerty
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
+*
+*
+* 	This file displays the leaderboard
+* 	To do so this file conects to the 
+* 	database and loops through id to 
+* 	get and display the users info
+*
+* 	Its not used in this version but it is functional
 -->
 <!DOCTYPE HTML>
 

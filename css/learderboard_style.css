@@ -2,6 +2,10 @@
 *   Author: Declan Finnerty
 *   Assignment: Minor   Project –   Eco Ninja, SxSW
 */
+
+/*
+    this is a div that contains the leaderboard
+ */
 div.container
 {
 
@@ -15,6 +19,9 @@ div.container
 }
 
 
+/*
+    This is the div that contains the leaderboard header
+ */
 #LbHeader
 {
     background: #197B99;
@@ -23,6 +30,10 @@ div.container
     margin-right: auto;
 
 }
+
+/*
+    this is the heading over the leaderboard
+ */
 h1#leaderboardH1
 {
     text-align: center;
@@ -36,6 +47,9 @@ h2#leaderboardH2
 
 }
 
+/*
+    leaderboard table
+ */
 table#leaderboardTable, th, td {
     border: 1px solid white;
     text-align: center;
@@ -49,16 +63,24 @@ table#leaderboardTable {
 	margin-right: auto;
 }
 
-th {
+th 
+{
     background-color: #3C2415;
     color: white;
     height: 50px;
     border: 1px solid white;
 }
-td {
+
+td 
+{
     padding: 15px;
 }
 
+
+/*
+    the table row has alternitive
+    background colour
+ */
 tr 
 {
     background-color: #F4DB97;

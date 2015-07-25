@@ -1,6 +1,10 @@
 <!--
 *	Author:	Declan Finnerty
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
+*
+* 	This script gets the data from the 
+* 	quiz and uses it to callculate the 
+* 	score, it then updates the database
 -->
 <?php
 	include 'ConnectToDB.php';

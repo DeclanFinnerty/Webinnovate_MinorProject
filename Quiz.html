@@ -1,6 +1,9 @@
 <!--
 *	Author:	Declan Finnerty
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
+*
+* 	This file contains questions that the user 
+* 	that the user can answer to gain a score
 -->
 <!DOCTYPE HTML>
 
@@ -23,10 +26,15 @@
 		<a href="index.php">index</a>
 
 
-			<!-- The Quiz form -->
+			<!-- The Quiz form 
+					This form contains questions that will be used to giv the user a score
+			-->
 
 			<form action="Quiz_script.php" method="post">
 
+				<!--
+					these hidden fields will hold the users name and county so it can be sent to the server along with the score
+				-->
 				<input type="hidden" id="hiddenUsrName" name="userName">
 				<input type="hidden" id="hiddenUsrCounty" name="userCounty">
 
@@ -162,6 +170,11 @@
 
 			</form>
 
+		<!--
+			this script gets the current user info(that is stored clientside)
+			and then attaches it to the hidden field of the form so it can be 
+			sent to the server along with the score
+		-->
 		<script type="text/javascript">
 			function addUsrDataToForm()
 			{
