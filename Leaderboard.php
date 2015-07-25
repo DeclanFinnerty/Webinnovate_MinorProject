@@ -18,7 +18,9 @@
 
 		<div class="container">
 
-			<h1 id="leaderboardH1">Leaderboard</h1>
+			<div id="LbHeader">
+				<h1 id="leaderboardH1">Leaderboard</h1>
+			</div>
 
 			<?php
 				include 'ConnectToDB.php';

@@ -2,7 +2,7 @@
 div.container
 {
 
-	background: #ffff00;
+	background: #15D000;
 	padding: 15px 15px 15px 15px;
 	margin: 20px;
 	border: 4px dashed black;
@@ -11,16 +11,24 @@ div.container
     width: 50%;
 }
 
-h1#leaderboardH1
+
+#LbHeader
 {
-	background: #ff0000;
-    text-align: center;
+    background: #197B99;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
+h1#leaderboardH1
+{
+    text-align: center;
 
+
+}
 h2#leaderboardH2
 {
-	background: #0000ff;
+	background: #197B99;
     text-align: center;
 
 }
@@ -39,7 +47,7 @@ table#leaderboardTable {
 }
 
 th {
-    background-color: green;
+    background-color: #3C2415;
     color: white;
     height: 50px;
     border: 1px solid white;
@@ -50,11 +58,11 @@ td {
 
 tr 
 {
-    background-color: purple;
+    background-color: #F4DB97;
 
 }
 tr.altRow 
 {
-    background-color: blue;
+    background-color: #FFF799;
 
 }
