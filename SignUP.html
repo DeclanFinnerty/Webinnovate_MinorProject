@@ -15,6 +15,15 @@
 		<meta charset="utf-8"/>
 		<title>Sign-up</title>
 
+
+		<!-- Global stylesheet to reset page style for common starting point on each browser -->
+		<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
+		<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
+		<link rel="stylesheet" type="text/css" href="css/Global.css">
+		<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
+
+
+		<link rel="stylesheet" type="text/css" href="css/quiz_style.css">
 		<link rel="stylesheet" type="text/css" href="css/myCSS.css">
 		 <script src="js/storeUsrLocaly.js"></script> 
 
@@ -29,66 +38,68 @@
 		-->
 		<form action="SignIn_script.php" method="post">
 
-			<fieldset>
-				<legend>Sign in</legend>
-				
-				<p>
-					<label for="userName">UserName:</label>
-					<input type="text" id="userName" name="userName" autocomplete="on" required/>
+			<div class="container">
+				<fieldset>
+					<legend>Sign in</legend>
+					
+					<p>
+						<label for="userName">UserName:</label>
+						<input type="text" id="userName" name="userName" autocomplete="on" required/>
+					</p>
+
+					<!-- Select a county -->
+					<p>
+					<label for="userCounty">County:</label>
+					<select id="userCounty" name="userCounty" required>
+						<optgroup label="County" >
+							<option value="Antrim">Antrim</option>
+							<option value="Armagh">Armagh</option>
+							<option value="Carlow">Carlow</option>
+							<option value="Cavan">Cavan</option>
+							<option value="Clare">Clare</option>
+							<option value="Cork">Cork</option>
+							<option value="Derry">Derry</option>
+							<option value="Donegal">Donegal</option>
+							<option value="Down">Down</option>
+							<option value="Dublin">Dublin</option>
+							<option value="Fermanagh">Fermanagh</option>
+							<option value="Galway">Galway</option>
+							<option value="Kerry">Kerry</option>
+							<option value="Kildare">Kildare</option>
+							<option value="Kilkenny">Kilkenny</option>
+							<option value="Laois">Laois</option>
+							<option value="Leitrim">Leitrim</option>
+							<option value="Limerick">Limerick</option>
+							<option value="Longford">Longford</option>
+							<option value="Louth">Louth</option>
+							<option value="Mayo">Mayo</option>
+							<option value="Meath">Meath</option>
+							<option value="Monaghan">Monaghan</option>
+							<option value="Offaly">Offaly</option>
+							<option value="Roscommon">Roscommon</option>
+							<option value="Sligo">Sligo</option>
+							<option value="Tipperary">Tipperary</option>
+							<option value="Tyrone">Tyrone</option>
+							<option value="Waterford">Waterford</option>
+							<option value="Westmeath">Westmeath</option>
+							<option value="Wexford">Wexford</option>
+							<option value="Wicklow">Wicklow</option>
+						</optgroup>
+
+					</select>
 				</p>
 
-				<!-- Select a county -->
-				<p>
-				<label for="userCounty">County:</label>
-				<select id="userCounty" name="userCounty" required>
-					<optgroup label="County" >
-						<option value="Antrim">Antrim</option>
-						<option value="Armagh">Armagh</option>
-						<option value="Carlow">Carlow</option>
-						<option value="Cavan">Cavan</option>
-						<option value="Clare">Clare</option>
-						<option value="Cork">Cork</option>
-						<option value="Derry">Derry</option>
-						<option value="Donegal">Donegal</option>
-						<option value="Down">Down</option>
-						<option value="Dublin">Dublin</option>
-						<option value="Fermanagh">Fermanagh</option>
-						<option value="Galway">Galway</option>
-						<option value="Kerry">Kerry</option>
-						<option value="Kildare">Kildare</option>
-						<option value="Kilkenny">Kilkenny</option>
-						<option value="Laois">Laois</option>
-						<option value="Leitrim">Leitrim</option>
-						<option value="Limerick">Limerick</option>
-						<option value="Longford">Longford</option>
-						<option value="Louth">Louth</option>
-						<option value="Mayo">Mayo</option>
-						<option value="Meath">Meath</option>
-						<option value="Monaghan">Monaghan</option>
-						<option value="Offaly">Offaly</option>
-						<option value="Roscommon">Roscommon</option>
-						<option value="Sligo">Sligo</option>
-						<option value="Tipperary">Tipperary</option>
-						<option value="Tyrone">Tyrone</option>
-						<option value="Waterford">Waterford</option>
-						<option value="Westmeath">Westmeath</option>
-						<option value="Wexford">Wexford</option>
-						<option value="Wicklow">Wicklow</option>
-					</optgroup>
+					<!--
+						this submits sends the users info to the 
+						server to be put in a databaseand calls a 
+						js function that stores the info client side
+					-->
+					<div class="submitDiv">
+						<input class="submitBtn"  type="submit" name="Submit" onclick="storeUsrLocaly()">
+					</div>
 
-				</select>
-			</p>
-
-				<!--
-					this submits sends the users info to the 
-					server to be put in a databaseand calls a 
-					js function that stores the info client side
-				-->
-				<p>
-					<input type="submit" name="Submit" onclick="storeUsrLocaly()">
-				</p>
-
-			</fieldset>
+				</fieldset>
+			</div>
 
 		</form>
 

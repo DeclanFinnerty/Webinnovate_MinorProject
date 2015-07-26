@@ -18,6 +18,13 @@
 		<meta charset="utf-8"/>
 		<title>Leaderboard</title>
 
+
+		<!-- Global stylesheet to reset page style for common starting point on each browser -->
+		<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
+		<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
+		<link rel="stylesheet" type="text/css" href="css/Global.css">
+		<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
+		
 		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
 
 		<link rel="stylesheet" media="only screen and (max-width: 1000px)" type="text/css" href="css/learderboard_styleMobile.css">

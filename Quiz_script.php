@@ -30,6 +30,14 @@
 
 	if ($db->query($sql) === TRUE) 
 	{
+
+		/* Import the style sheets */
+		echo '<!-- Global stylesheet to reset page style for common starting point on each browser -->
+		<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
+		<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
+		<link rel="stylesheet" type="text/css" href="css/Global.css">
+		<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">';
+
 	    echo "<h1>Your score is: " . $score . "</h1>";
 	    echo "<a href='index.php'>index</a>";
 	} 
