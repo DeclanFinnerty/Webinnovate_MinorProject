@@ -17,7 +17,8 @@
 
 	if ($db->query($sql) === TRUE) 
 	{
-	    echo "New record created successfully";
+	    echo "<h1>Hi " . $usrName . " you are signed in</h1>";
+	    echo "<a href='index.php'>index</a>";
 	} 
 	else
 	{

@@ -30,7 +30,8 @@
 
 	if ($db->query($sql) === TRUE) 
 	{
-	    echo "New record created successfully";
+	    echo "<h1>Your score is: " . $score . "</h1>";
+	    echo "<a href='index.php'>index</a>";
 	} 
 	else
 	{
