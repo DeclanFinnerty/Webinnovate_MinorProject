@@ -1,0 +1,25 @@
+/*
+*	Author:	Robert Hunter
+*	Assignment:	Minor	Project	–	Eco Ninja, SxSW
+*	Date	:	12/07/15
+*	Ref:	
+*/
+
+
+button.register {
+	background-color: #15D000;
+}
+
+button.register:hover {
+	background-color: #197B305;
+}
+
+
+h1.register {
+	color: #197B30;
+}
+
+label.register {
+	color: #15D000;
+}
+

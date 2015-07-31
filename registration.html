@@ -1,0 +1,263 @@
+<!--
+*	Author:	Robert Hunter
+*	Assignment:	Minor	Project	–	Eco Ninja, SxSW
+*	Date	:	12/07/15
+*	Ref:	
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+	<title>Econ Ninja template</title>
+	<!-- Global stylesheet to reset page style for common starting point on each browser -->
+	<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
+	<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
+	<link rel="stylesheet" type="text/css" href="css/Global.css">
+	<!-- Styling for registration -->
+	<link rel="stylesheet" type="text/css" href="css/registration.css">
+	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container-fluid">	
+
+				<header class="bg-greenDark">
+					
+				</header>
+	<div class="navbar navbar-default">
+				    <div class="container-fluid bg-cream">
+
+				      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+				      <div class="navbar-header">
+					       	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				              <span class="sr-only">Toggle navigation</span>
+				              <span class="icon-bar"></span>
+				              <span class="icon-bar"></span>
+				              <span class="icon-bar"></span>
+	            			</button>
+	            		</div>
+				  	
+
+				  		<div id="navbar" class="navbar-collapse collapse">
+				            <ul class="nav navbar-nav navbar-right">
+					             <li role="presentation">
+							    	<a class="topNav" href="index.html">Home</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="registration.html">Profile</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="quiz.html">Challenge</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="#">Leaderboards</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="#">Blog</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="#">Gallery</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="#">About</a>
+							    </li>
+				          </ul>
+				        </div>			  
+				
+				  </div> <!-- Close nav collapse -->
+				</div>	 <!-- Close container fluid -->
+
+				<div class="mainContent container-fluid"> 
+				<!-- Hey declan. The mainContent div is where the page specific content will be located. Editing anything outside of this section could break the standard layout  elements of the site -->
+				<!-- Start of content here. Edit after -->
+				<h1 class="register"> Become an Eco Ninja!</h1>
+
+
+				<!--- Form inputs -->
+				<div class="row">
+  					<div class="col-sm-12 col-md-6">
+						<form class="form" action>
+						  <div class="form-group">
+						    <label for="nameField" class="register">Ninja Name</label>
+						    <input type="text" class="form-control" id="nameField" placeholder="Awesome ninja name">
+						  </div>
+						  <div class="form-group">
+						    <label for="emailField" class="register">Email</label>
+						    <p class="help-block">Please use your parents email.</p>
+						    <input type="email" class="form-control" id="emailField" placeholder="Email">
+						  </div>
+						  <div class="form-group">
+						    <label for="passwordField" class="register">Password</label>
+						    <input type="password" class="form-control" id="passwordField" placeholder="*******">
+						  </div>
+					</div>
+				</div>
+
+				<!-- Avatar Input -->
+				<div class="col-sm-6 col-md-6"> <!-- Avatar Selection -->
+
+					    <div class="thumbnail">
+					      <h3 class="avatarGroup"> Select Avatar </h3>
+					      <img src="assets/EarthNinja.png" alt="avatar" id="avatarImg">
+					      <div class="caption avatarGroup">
+					        <p> User controls to selects </p>
+					        <p>
+					        	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+								  <button type="button" class="btn btn-default" id="avatarMinus" disabled>
+								  		<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+								  </button>
+								  
+								  <button type="button" class="btn btn-default" id="avatarInfo">
+								  		ava1
+									</button>
+								  <button type="button" class="btn btn-default" id="avatarPlus">
+								  		<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+								  </button>
+								</div>
+					        </p>
+						        <!-- info alert, hidden by default-->
+								<div class="alert alert-info alert-dismissible avatarAlert" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <strong>Ninja Time!</strong> Use the arrows to select your ninja.
+								</div>
+					     	</div>
+					    </div> <!-- end thumbnail -->
+					   </div> <!-- end avatartSelection -->
+
+					  <div class="col-sm-6 col-md-6"> <!-- Crest Selection -->
+
+					    <div class="thumbnail">
+					      <h3 class="avatarGroup"> Select Crest </h3>
+					      <img src="assets/ava1.png" alt="avatar" id="crestImg">
+					      <div class="caption avatarGroup">
+					        <p> User controls to selects </p>
+					        <p>
+					        	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+								  <button type="button" class="btn btn-default" id="crestMinus" disabled>
+								  		<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+								  </button>
+								  
+								  <button type="button" class="btn btn-default" id="crestInfo">
+								  		ava1
+									</button>
+								  <button type="button" class="btn btn-default" id="crestPlus">
+								  		<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+								  </button>
+								</div>
+					        </p>
+						        <!-- info alert, hidden by default-->
+								<div class="alert alert-info alert-dismissible avatarAlert" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <strong>Ninja Time!</strong> Use the arrows to select your ninja.
+								</div>
+					     	</div>
+					    </div> <!-- end thumbnail -->
+					   </div> <!-- end crestSelection -->
+					   
+					  </div> <!-- end col -->
+
+
+
+
+					 
+					  <button type="submit" class="btn btn-default register">Submit</button>
+					</form>
+				<!-- End Of content here -->
+				</div>
+
+				<footer class="bg-yellow">
+					<img src="assets/imgs/ENJ_Logo.png" class="img-responsive" alt="Eco Ninja Header">
+				</footer>
+		</div>
+
+		<script src="Bootstrap3/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>	
+		<script>
+
+				// logic for alert show
+				var alertCalled = false;
+			  $('#avatarInfo').on('click', function () {
+			   	if (!alertCalled) {
+			   		$( ".avatarAlert" ).show();
+			   		alertCalled = true;
+			   		console.log('Alert shown');
+			   	};
+			  });
+
+
+			  // selection component class construction
+			  var selectionComponent = function (idStr,imgArray) {
+			  			this.idStr = idStr;
+			  			this.indexVal = 0;
+			  			this.imgArray = imgArray;
+			  };
+			  var avatarComponent = new selectionComponent('avatar',["EarthNinja.png","LifeNinja.png","FireNinja.png","WaterNinja.png"]);
+			  var crestComponent = new selectionComponent('crest',["ava1.png","ava2.png","ava3.png","ava4.png"]);
+
+			  // Logic to handle Avatar Selection
+			  $('#avatarPlus').on('click', function(){
+			  	changeComponent(true, avatarComponent);
+			  });
+
+			  $('#avatarMinus').on('click', function(){
+			  	changeComponent(false,avatarComponent);
+				});
+
+			// Logic to handle Crest Selection
+			  $('#crestPlus').on('click', function(){
+			  	changeComponent(true, crestComponent);
+			  });
+
+			  $('#crestMinus').on('click', function(){
+			  	changeComponent(false,crestComponent);
+				});			  
+
+			  // this function handles swapping display and image values for the image 
+			  function changeComponent(plus, component) {
+
+			  	if (!component.imgArray || !component.idStr) {
+			  		throw new Error('Vital params not set!');
+			  	};
+
+			  	if (plus) component.indexVal++;
+			  	else component.indexVal--;
+
+			  	console.log('Index: ' + component.indexVal);
+
+			  	//check if state needs toggled
+			  	var plusID = '#'+ component.idStr +'Plus';
+			  	if (component.indexVal >= component.imgArray.length -1) {
+			  			$(plusID).prop('disabled', true);
+			  	}
+			  	else {
+			  			$(plusID).prop('disabled', false);
+			  	}
+
+			  	// check if avatarMinus state needs toggled
+			  	var minusID = '#'+ component.idStr +'Minus';
+			  	if (component.indexVal <= 0 ) {
+			  			$(minusID).prop('disabled', true);
+			  	}
+			  	else {
+			  			$(minusID).prop('disabled', false);
+			  	}
+
+			  	// Update display name of current avatar
+			  	var currentImg = component.imgArray[component.indexVal];
+			  	var imgNameStr = new String(currentImg);
+			  	imgNameStr = imgNameStr.replace('.png','');
+			  	$('#'+component.idStr +'Info').text(imgNameStr);
+
+			  	// Update avatar Display Img src
+			  	var newSrc = 'assets/' + currentImg;
+			  	$('#'+component.idStr +'Img').attr('src', newSrc);
+			  	console.log(newSrc);
+
+			  };
+
+		</script>
+
+	</body>
+</html>

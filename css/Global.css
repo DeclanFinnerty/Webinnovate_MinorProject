@@ -16,11 +16,17 @@
 .bg-yellow { background-color: #FFF799; }
 .bg-brown { background-color: #3C2415}
 
+body {
+	padding: 0px;
+}
+
 p {
 	/*color: green;*/
 }
 header {
-
+	min-height: 15vh;
+	background: url("../assets/imgs/Eco-Ninja-Header.png") no-repeat left center;
+	background-size: cover;
 	background-color: green;
 }
 
@@ -28,11 +34,12 @@ a {
 }
 
 footer {
-
+	min-height: 15vh;
 	background-color: yellow;
 }
 
 nav.topNav {
+	min-height: 7.5vh;
 }
 
 a.topNav {
@@ -54,8 +61,45 @@ p.mainContent {
 	color: black;
 }
 
-div.mainContent {
-	background-color: white;
+a.mainContent {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 22px;
+  color: #197B30;
+  padding: 10px 20px 10px 20px;
+  border-style: none;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+a.mainContent:hover {
+	background: rgba(204, 235, 204, 0.35);
+	color: #197B30;
+  	text-decoration: none;
+}
+
+a.mainContent:active {
+	background: rgba(204, 235, 204, 0.35);
+	color: #197B30;
+  	text-decoration: none;
+}
+
+.avatarAlert {
+    	display: none;
+    }
+
+    .avatarGroup {
+    	margin: 0 70;
+    	text-align: center;
+    }
+.container .jumbotron {
+    border-radius: 0px;
+}
+
+.jumbotron {
+	min-height: 70vh;
+	border-radius: 0px;
+	background: url("../assets/imgs/Polar-Bears-in-Sunset.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 
