@@ -88,7 +88,11 @@
 		  							Climate change Video</a>
 		  						</div>	
 		  						<div class="col-sm-6 col-md-6">	
-		  							<a class="btn btn-primary btn-lg mainContent" href="#" role="button">Fun Facts About Climate Change</a>
+			  							<a id="popoverBTN" class="btn btn-primary btn-lg mainContent" class="btn btn-primary btn-lg mainContent" role="button" data-toggle="popover"> 
+			  								Fun Facts
+			  							</a>
+		  					<!--		
+		  					<button id="popoverBTN" type="button" class="btn btn-default popoverBTN" data-container="body" data-toggle="popover"> Fun Facts </button>-->
 		  						</div>
 		  						<div class="col-sm-6 col-md-6">
 		  							<a class="btn btn-primary btn-lg mainContent" href="#" role="button"> Latest News</a>
@@ -101,6 +105,7 @@
 						</div>
 					</div>
 
+				 
 				<!-- End Of main content here -->
 				</div>
 
@@ -111,5 +116,51 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="Bootstrap3/js/bootstrap.min.js"></script>	
+		<script> 
+
+				$(document).ready(function(){
+				// initialize popovers
+				$('[data-toggle="popover"]').popover();
+			});
+
+
+				// logic for random fact popover
+				var fact1 = "Fact 1: Excepteur sint obcaecat cupiditat non proident culpa.";
+				var fact2 = "Fact 2: Excepteur sint obcaecat cupiditat non proident culpa.";
+				var fact3 = "Fact 3: Excepteur sint obcaecat cupiditat non proident culpa.";
+				var fact4 = "Fact 4: Excepteur sint obcaecat cupiditat non proident culpa.";
+				var randomFactArray = [fact1, fact2, fact3, fact4];
+
+				function randomInt(min,max) {
+					return Math.floor(Math.random() * (max - min)) + min;
+				}
+
+				function randomFact (){
+						var randIDX =  randomInt(0,4);
+						return randomFactArray[randIDX];
+				}
+				function randomPos (){
+						var posArray = ['left','right','top','bottom'];
+						var randIDX =  randomInt(0,4);
+						return posArray[randIDX];
+				}
+
+				$('#popoverBTN').popover({
+						content: function () {
+							return randomFact();
+						},
+						delay: { "show": 500, "hide": 500 },
+						placement: function() {
+							return randomPos();
+						},
+						trigger: 'hover'
+				});
+
+				$('#popoverBTN').on('hidden.bs.popover', function () {
+  						console.log('popover hidden');
+				});
+
+		</script>
+
 	</body>
 </html>

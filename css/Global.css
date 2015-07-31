@@ -83,6 +83,14 @@ a.mainContent:active {
   	text-decoration: none;
 }
 
+.popoverBTN {
+	  transition: 0.5s;
+}
+.popoverBTN:hover {
+	transform: rotate(360deg);
+	transition-duration: 0.75s;
+}
+
 .avatarAlert {
     	display: none;
     }
