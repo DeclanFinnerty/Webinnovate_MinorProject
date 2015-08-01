@@ -11,14 +11,6 @@
  */
 .container
 {
-
-	background: #FFF799;
-	padding: 15px 15px 15px 15px;
-	margin: 20px;
-	border: 4px dashed black;
-	margin-left: auto;
-	margin-right: auto;
-
 	min-width: 550px;
 }
 
@@ -33,11 +25,6 @@
 	flex-direction: column;
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
-
-	background: #3C2415;
-	padding: 15px 15px 15px 15px;
-	margin: 20px;
-	border: 4px dashed black;
 }
 
 
@@ -46,45 +33,8 @@
  */
 .quizEllement
 {
-	flex: 1;
-	-webkit-flex: 1;
-
-	background: #F4DB97;
-	padding: 15px 15px 15px 15px;
-	margin: 20px;
-	border: 4px dashed black;
 	margin-left: auto;
 	margin-right: auto;
 
-}
-
-
-
-/*
-	this keeps the radio buttons in line
- */
-input{
-  float: right; 
-}
-
-
-/*
-	the submit button for the quiz contained here
- */
-#submitDiv
-{	
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/*
-	the styling for the submit button
- */
-#submitBtn
-{
-	background-color: #FFF799;
-	text-align: center;
-	width: 90px;
-	height: 50px;
 }
 
