@@ -20,9 +20,6 @@
 	<link rel="stylesheet" type="text/css" href="css/registration.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
 
-	<!-- A script that stores the users data localy-->
-	<script src="js/storeUsrLocaly.js"></script>
-
 	</head>
 	<body>
 		<div class="container-fluid">	
@@ -84,8 +81,8 @@
   					<div class="col-sm-12 col-md-6">
 						<form class="form" action="SignIn_script.php"  method="post">
 						  <div class="form-group">
-						    <label for="nameField" class="register">Ninja Name</label>
-						    <input type="text" class="form-control" id="nameField" name="nameField" placeholder="Awesome ninja name">
+						    <label for="userName" class="register">Ninja Name</label>
+						    <input type="text" class="form-control" id="userName" name="userName" placeholder="Awesome ninja name">
 						  </div>
 
 					<!-- Select a county -->
@@ -204,8 +201,6 @@
 					  </div> <!-- end col -->
 
 
-
-
 					 
 					  <button type="submit" class="btn btn-default register" onclick="storeUsrLocaly()">Submit</button>
 					</form>
@@ -303,6 +298,9 @@
 			  };
 
 		</script>
+		
+	<!-- A script that stores the users data localy-->
+	<script src="js/storeUsrLocaly.js"></script>
 
 	</body>
 </html>

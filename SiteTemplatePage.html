@@ -78,66 +78,7 @@
 				<div class="mainContent container-fluid"> 
 				<!-- Start of context sensitive content here. Edit after this line -->
 				
-								  	
-<!--
-*	Author:	Declan Finnerty
-*	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
-*
-*
-* 	This file displays the leaderboard
-* 	To do so this file conects to the 
-* 	database and loops through id to 
-* 	get and display the users info
-*
-* 	Its not used in this version but it is functional
--->
-
-
-	<div>
-
-		<div class="container">
-
-			<?php
-				include 'ConnectToDB.php';
-
-				$sqlget = "SELECT * FROM user_info ORDER BY -Score";
-				$sqldata = mysqli_query($db, $sqlget) or die('Error getting data from database');
-
-				echo "<table id='leaderboardTable'>";
-				echo "<tr><th>UserName</th><th>County</th><th>Score</th></tr>";
-
-				$count = 0;
-				while($row = mysqli_fetch_array($sqldata, MYSQL_ASSOC))
-				{
-					$count += 1;
-					if(($count % 2) == 0) 
-					{
-						echo "<tr><td>";
-					}
-					else
-					{
-						echo "<tr class='altRow'><td>";
-					}
-
-					echo $row['UserName'];
-					echo "</td><td>";
-					echo $row['County'];
-					echo "</td><td>";
-					echo $row['Score'];
-					echo "</td></tr>";
-
-				}
-
-				if($count == 0)
-				{
-					echo "<tr><td colspan='4'>Leaderboard is empty</td></tr>";
-				}
-
-				echo "</table>";
-
-			?>
-	</div>
-	</div>
+		
 
 				<!-- End Of context sensitive content here. -->
 				</div>
