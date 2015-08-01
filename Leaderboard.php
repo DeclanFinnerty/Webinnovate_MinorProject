@@ -1,5 +1,5 @@
 <!--
-*	Author:	Robert Hunter
+*	Author: Declan Finnerty and	Robert Hunter
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW
 *	Date	:	12/07/15
 *	Ref:	
@@ -103,13 +103,24 @@
 				$sqlget = "SELECT * FROM user_info ORDER BY -Score";
 				$sqldata = mysqli_query($db, $sqlget) or die('Error getting data from database');
 
+				//get the winner
+				$winner = mysqli_fetch_array($sqldata, MYSQL_ASSOC);
+
+				//Congradulate the winer in the heading
+				echo "<div id='leaderboardHeading'><h2 id='leaderboardH2'> Congratulations ";
+				echo $winner['UserName'] . " you are leading </h2></div>";
+
+				//Add the headings for the table
 				echo "<table id='leaderboardTable'>";
 				echo "<tr><th>UserName</th><th>County</th><th>Score</th></tr>";
 
 				$count = 0;
-				while($row = mysqli_fetch_array($sqldata, MYSQL_ASSOC))
+				do //Add the winner to the table then loop and add the rest
 				{
-					$count += 1;
+					if ($count == 0) {
+						$row = $winner;
+					}
+
 					if(($count % 2) == 0) 
 					{
 						echo "<tr><td>";
@@ -126,7 +137,9 @@
 					echo $row['Score'];
 					echo "</td></tr>";
 
-				}
+					$count += 1;
+
+				} while($row = mysqli_fetch_array($sqldata, MYSQL_ASSOC));
 
 				if($count == 0)
 				{
