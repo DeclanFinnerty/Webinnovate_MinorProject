@@ -7,8 +7,9 @@
 <?php
 	include 'ConnectToDB.php';
 
+echo implode(" ",$_POST);
 	//Get user details from client
-	$usrName = $_POST['userName'];
+	$usrName = $_POST['nameField'];
 	$county = $_POST['userCounty'];
 	
 	//Put client details in database

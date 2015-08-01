@@ -19,6 +19,10 @@
 	<!-- Styling for registration -->
 	<link rel="stylesheet" type="text/css" href="css/registration.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
+
+	<!-- A script that stores the users data localy-->
+	<script src="js/storeUsrLocaly.js"></script>
+
 	</head>
 	<body>
 		<div class="container-fluid">	
@@ -78,11 +82,52 @@
 				<!--- Form inputs -->
 				<div class="row">
   					<div class="col-sm-12 col-md-6">
-						<form class="form" action>
+						<form class="form" action="SignIn_script.php"  method="post">
 						  <div class="form-group">
 						    <label for="nameField" class="register">Ninja Name</label>
-						    <input type="text" class="form-control" id="nameField" placeholder="Awesome ninja name">
+						    <input type="text" class="form-control" id="nameField" name="nameField" placeholder="Awesome ninja name">
 						  </div>
+
+					<!-- Select a county -->
+					<div class="form-group">
+					<label for="userCounty" class="register">County:</label>
+					<select id="userCounty" class="form-control"  name="userCounty" required>
+						<optgroup label="County" >
+							<option value="Antrim">Antrim</option>
+							<option value="Armagh">Armagh</option>
+							<option value="Carlow">Carlow</option>
+							<option value="Cavan">Cavan</option>
+							<option value="Clare">Clare</option>
+							<option value="Cork">Cork</option>
+							<option value="Derry">Derry</option>
+							<option value="Donegal">Donegal</option>
+							<option value="Down">Down</option>
+							<option value="Dublin">Dublin</option>
+							<option value="Fermanagh">Fermanagh</option>
+							<option value="Galway">Galway</option>
+							<option value="Kerry">Kerry</option>
+							<option value="Kildare">Kildare</option>
+							<option value="Kilkenny">Kilkenny</option>
+							<option value="Laois">Laois</option>
+							<option value="Leitrim">Leitrim</option>
+							<option value="Limerick">Limerick</option>
+							<option value="Longford">Longford</option>
+							<option value="Louth">Louth</option>
+							<option value="Mayo">Mayo</option>
+							<option value="Meath">Meath</option>
+							<option value="Monaghan">Monaghan</option>
+							<option value="Offaly">Offaly</option>
+							<option value="Roscommon">Roscommon</option>
+							<option value="Sligo">Sligo</option>
+							<option value="Tipperary">Tipperary</option>
+							<option value="Tyrone">Tyrone</option>
+							<option value="Waterford">Waterford</option>
+							<option value="Westmeath">Westmeath</option>
+							<option value="Wexford">Wexford</option>
+							<option value="Wicklow">Wicklow</option>
+						</optgroup>
+					</select>
+
 						  <div class="form-group">
 						    <label for="emailField" class="register">Email</label>
 						    <p class="help-block">Please use your parents email.</p>
@@ -162,7 +207,7 @@
 
 
 					 
-					  <button type="submit" class="btn btn-default register">Submit</button>
+					  <button type="submit" class="btn btn-default register" onclick="storeUsrLocaly()">Submit</button>
 					</form>
 				<!-- End Of content here -->
 				</div>
