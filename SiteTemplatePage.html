@@ -19,6 +19,12 @@
 	<!-- Styling for registration -->
 	<link rel="stylesheet" type="text/css" href="css/registration.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
+
+		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
+
+		<link rel="stylesheet" media="only screen and (max-width: 700px)" type="text/css" href="css/learderboard_styleMobile.css">
+		<link rel="stylesheet" media="only screen and (min-width: 700px)" type="text/css" href="css/learderboard_style.css">
+		
 	</head>
 	<body>
 		<div class="container-fluid">	
@@ -52,7 +58,7 @@
 							    	<a class="topNav" href="quiz.html">Challenge</a>
 							    </li>
 							    <li role="presentation">
-							    	<a class="topNav" href="#">Leaderboards</a>
+							    	<a class="topNav" href="Leaderboard.php">Leaderboards</a>
 							    </li>
 							    <li role="presentation">
 							    	<a class="topNav" href="#">Blog</a>
@@ -70,16 +76,68 @@
 				</div>	 <!-- Close container fluid -->
 
 				<div class="mainContent container-fluid"> 
-					<div 
-				<!-- Hey declan. The mainContent div is where the page specific content will be located. Editing anything outside of this section could break the standard layout  elements of the site -->
 				<!-- Start of context sensitive content here. Edit after this line -->
 				
-				<div class="alert alert-danger alert-dismissible" role="alert">
-					  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					 </button>
-					  <strong>Warning!</strong> This is only the basic template for Eco Ninja site pages. Context sensitive content will be displayed here. Insert your code inside the <highlight> mainContent </highlight> div. Do not include the html header information within the <highlight> mainContent </highlight> div. View source code for futher info.
-				</div>
+								  	
+<!--
+*	Author:	Declan Finnerty
+*	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
+*
+*
+* 	This file displays the leaderboard
+* 	To do so this file conects to the 
+* 	database and loops through id to 
+* 	get and display the users info
+*
+* 	Its not used in this version but it is functional
+-->
+
+
+	<div>
+
+		<div class="container">
+
+			<?php
+				include 'ConnectToDB.php';
+
+				$sqlget = "SELECT * FROM user_info ORDER BY -Score";
+				$sqldata = mysqli_query($db, $sqlget) or die('Error getting data from database');
+
+				echo "<table id='leaderboardTable'>";
+				echo "<tr><th>UserName</th><th>County</th><th>Score</th></tr>";
+
+				$count = 0;
+				while($row = mysqli_fetch_array($sqldata, MYSQL_ASSOC))
+				{
+					$count += 1;
+					if(($count % 2) == 0) 
+					{
+						echo "<tr><td>";
+					}
+					else
+					{
+						echo "<tr class='altRow'><td>";
+					}
+
+					echo $row['UserName'];
+					echo "</td><td>";
+					echo $row['County'];
+					echo "</td><td>";
+					echo $row['Score'];
+					echo "</td></tr>";
+
+				}
+
+				if($count == 0)
+				{
+					echo "<tr><td colspan='4'>Leaderboard is empty</td></tr>";
+				}
+
+				echo "</table>";
+
+			?>
+	</div>
+	</div>
 
 				<!-- End Of context sensitive content here. -->
 				</div>

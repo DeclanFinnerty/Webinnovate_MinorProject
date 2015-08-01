@@ -1,6 +1,8 @@
 <!--
-*	Author:	Declan Finnerty
+*	Author:	Robert Hunter
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW
+*	Date	:	12/07/15
+*	Ref:	
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,36 +16,69 @@
 	<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
 	<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
 	<link rel="stylesheet" type="text/css" href="css/Global.css">
+	<!-- Styling for registration -->
+	<link rel="stylesheet" type="text/css" href="css/registration.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
+
+		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
+
+		<link rel="stylesheet" media="only screen and (max-width: 700px)" type="text/css" href="css/learderboard_styleMobile.css">
+		<link rel="stylesheet" media="only screen and (min-width: 700px)" type="text/css" href="css/learderboard_style.css">
+		
 	</head>
 	<body>
 		<div class="container-fluid">	
 
 				<header class="bg-greenDark">
-					<img src="assets/imgs/Eco-Ninja-Header.png" class="img-responsive" alt="Eco Ninja Header">
+					
 				</header>
+	<div class="navbar navbar-default">
+				    <div class="container-fluid bg-cream">
 
-				<nav class="topNav bg-cream">
-					<div class="container-fluid">
-					  <ul class="nav nav-pills navbar-right">
-					    <li role="presentation" class="active"><a class="topNav" href="index.php">Home</a></li>
-					    <li role="presentation"><a class="topNav" href="SignUp.html">SignUp</a></li>
-					    <li role="presentation"><a class="topNav" href="#">Profile</a></li>
-					    <li role="presentation"><a class="topNav" href="Quiz.html">Challenge</a></li>
-					    <li role="presentation"><a class="topNav" href="Leaderboard.php">Leaderboards</a></li>
-					    <li role="presentation"><a class="topNav" href="#">Blog</a></li>
-					    <li role="presentation"><a class="topNav" href="#">Gallery</a></li>
-					    <li role="presentation"><a class="topNav" href="#">About</a></li>
-					  </ul>
-				  	</div>
-				</nav>
+				      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+				      <div class="navbar-header">
+					       	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				              <span class="sr-only">Toggle navigation</span>
+				              <span class="icon-bar"></span>
+				              <span class="icon-bar"></span>
+				              <span class="icon-bar"></span>
+	            			</button>
+	            		</div>
+				  	
 
-				<div class="mainContent"> 
+				  		<div id="navbar" class="navbar-collapse collapse">
+				            <ul class="nav navbar-nav navbar-right">
+					             <li role="presentation">
+							    	<a class="topNav" href="index.html">Home</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="registration.html">Profile</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="quiz.html">Challenge</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="Leaderboard.php">Leaderboards</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="#">Blog</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="#">Gallery</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="#">About</a>
+							    </li>
+				          </ul>
+				        </div>			  
+				
+				  </div> <!-- Close nav collapse -->
+				</div>	 <!-- Close container fluid -->
 
-				<!-- Hey declan. The mainContent div is where the page specific content will be located. Editing anything outside of this section could break the standard layout  elements of the site -->
-				<!-- Start of content here. Edit after -->
-					<div class="jumbotron mainContent">
-					  	
+				<div class="mainContent container-fluid"> 
+				<!-- Start of context sensitive content here. Edit after this line -->
+				
+								  	
 <!--
 *	Author:	Declan Finnerty
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
@@ -56,29 +91,9 @@
 *
 * 	Its not used in this version but it is functional
 -->
-<!DOCTYPE HTML>
-
-<html lang="en-us">
-
-	<head>
-		<meta charset="utf-8"/>
-		<title>Leaderboard</title>
 
 
-		<!-- Global stylesheet to reset page style for common starting point on each browser -->
-		<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
-		<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
-		<link rel="stylesheet" type="text/css" href="css/Global.css">
-		<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
-		
-		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
-
-		<link rel="stylesheet" media="only screen and (max-width: 700px)" type="text/css" href="css/learderboard_styleMobile.css">
-		<link rel="stylesheet" media="only screen and (min-width: 700px)" type="text/css" href="css/learderboard_style.css">
-
-	</head>
-
-	<body>
+	<div>
 
 		<div class="container">
 
@@ -122,11 +137,9 @@
 
 			?>
 	</div>
-	</body>
+	</div>
 
-</html>
-					</div>
-				<!-- End Of content here -->
+				<!-- End Of context sensitive content here. -->
 				</div>
 
 				<footer class="bg-yellow">
@@ -134,7 +147,12 @@
 				</footer>
 		</div>
 
-		<script src="Bootstrap3/js/bootstrap.min.js"></script>	
+		<script src="Bootstrap3/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>	
+		<script>
+		// Enter any javascript here
+
+		</script>
+
 	</body>
 </html>
-
