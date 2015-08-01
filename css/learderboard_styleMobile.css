@@ -4,9 +4,9 @@
 */
 
 /*
-	If the screen is too small keep the leaderboard 400px
+	If the screen is too small keep the leaderboard 330px
  */
 div.container
 {
-    width: 400px;
+    min-width: 290px;
 }

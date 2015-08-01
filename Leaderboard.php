@@ -73,8 +73,8 @@
 		
 		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
 
-		<link rel="stylesheet" media="only screen and (max-width: 1000px)" type="text/css" href="css/learderboard_styleMobile.css">
-		<link rel="stylesheet" media="only screen and (min-width: 1000px)" type="text/css" href="css/learderboard_style.css">
+		<link rel="stylesheet" media="only screen and (max-width: 700px)" type="text/css" href="css/learderboard_styleMobile.css">
+		<link rel="stylesheet" media="only screen and (min-width: 700px)" type="text/css" href="css/learderboard_style.css">
 
 	</head>
 
@@ -89,7 +89,7 @@
 				$sqldata = mysqli_query($db, $sqlget) or die('Error getting data from database');
 
 				echo "<table id='leaderboardTable'>";
-				echo "<tr><th>ID</th><th>UserName</th><th>County</th><th>Score</th></tr>";
+				echo "<tr><th>UserName</th><th>County</th><th>Score</th></tr>";
 
 				$count = 0;
 				while($row = mysqli_fetch_array($sqldata, MYSQL_ASSOC))
@@ -104,8 +104,6 @@
 						echo "<tr class='altRow'><td>";
 					}
 
-					echo $row['ID'];
-					echo "</td><td>";
 					echo $row['UserName'];
 					echo "</td><td>";
 					echo $row['County'];
