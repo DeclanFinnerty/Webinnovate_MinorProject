@@ -21,5 +21,12 @@ div.container
 h2#leaderboardH2
 {
     font-size: 150%;
- 
+ }
+
+
+/*
+    leaderboard table
+ */
+table#leaderboardTable, th, td {
+    font-size: 90%;
 }

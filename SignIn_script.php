@@ -1,5 +1,5 @@
 <!--
-*	Author:	Robert Hunter
+*	Author: Declan Finnerty and	Robert Hunter
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW
 *	Date	:	12/07/15
 *	Ref:	
@@ -99,6 +99,7 @@
 	{
 		echo "<div class='container'>";
 	    echo "<h1>Hi " . $usrName . " you are signed in</h1>";
+	    echo "<a class='mainContent' href='quiz.html'>Try the Quiz!</a>";
 		echo "</div>";
 	} 
 	else

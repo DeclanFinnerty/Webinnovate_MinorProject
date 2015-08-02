@@ -1,5 +1,5 @@
 <!--
-*	Author:	Robert Hunter
+*	Author: Declan Finnerty and	Robert Hunter
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW
 *	Date	:	12/07/15
 *	Ref:	
@@ -118,8 +118,18 @@
 		<link rel="stylesheet" type="text/css" href="css/Global.css">
 		<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">';
 
+
 		echo "<div class='container'>";
-	    echo "<h1>Hi ". $usrName . ", your score is: " . $score . "</h1>";
+		if($usrName != "null")
+		{//the user has signed in
+		    echo "<h1>Hi ". $usrName . ", your score is: " . $score . "</h1>";
+		    echo "<a class='mainContent' href='Leaderboard.php'>Leaderboard</a>";
+		}
+		else
+		{
+		    echo "<h1>You need to create a profile before you can get a score.</h1>";
+		    echo "<a class='mainContent' href='registration.html'>Profile</a>";
+		}
 		echo "</div>";
 	}
 	else

@@ -147,6 +147,7 @@
 				}
 
 				echo "</table>";
+				echo "<a class='mainContent' href='index.html'>Home</a>";
 
 			?>
 	</div>
