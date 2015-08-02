@@ -63,6 +63,7 @@
 iframe#quiz1Video
 {
 	border-radius: 25px;
+	-webkit-border-radius: 25px;
 }
 
 /*

@@ -28,5 +28,5 @@ h2#leaderboardH2
     leaderboard table
  */
 table#leaderboardTable, th, td {
-    font-size: 90%;
+    font-size: 80%;
 }
