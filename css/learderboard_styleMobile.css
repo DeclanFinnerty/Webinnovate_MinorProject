@@ -8,5 +8,18 @@
  */
 div.container
 {
-    min-width: 290px;
+    min-width: 230px;
+}
+
+/*
+    this is the heading over the leaderboard
+ */
+#leaderboardHeading
+{
+    width: 83%;
+}
+h2#leaderboardH2
+{
+    font-size: 150%;
+
 }
