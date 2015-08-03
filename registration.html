@@ -1,5 +1,5 @@
 <!--
-*	Author:	Robert Hunter
+*	Author: Declan Finnerty and	Robert Hunter
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW
 *	Date	:	12/07/15
 *	Ref:	
@@ -14,20 +14,23 @@
 	<title>Econ Ninja template</title>
 	<!-- Global stylesheet to reset page style for common starting point on each browser -->
 	<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
 	<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
 	<link rel="stylesheet" type="text/css" href="css/Global.css">
+	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
+	
 	<!-- Styling for registration -->
 	<link rel="stylesheet" type="text/css" href="css/registration.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
-
 	</head>
 	<body>
 		<div class="container-fluid">	
 
 				<header class="bg-greenDark">
-					
+				
 				</header>
-	<div class="navbar navbar-default">
+
+				<div class="navbar navbar-default">
 				    <div class="container-fluid bg-cream">
 
 				      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -70,10 +73,10 @@
 				  </div> <!-- Close nav collapse -->
 				</div>	 <!-- Close container fluid -->
 
-				<div class="mainContent container-fluid"> 
-				<!-- Hey declan. The mainContent div is where the page specific content will be located. Editing anything outside of this section could break the standard layout  elements of the site -->
+				<div class="mainContent"> 
+
 				<!-- Start of content here. Edit after -->
-				<h1 class="register"> Become an Eco Ninja!</h1>
+					<h1 class="register"> Become an Eco Ninja!</h1>
 
 
 				<!--- Form inputs -->
@@ -204,7 +207,8 @@
 					 
 					  <button type="submit" class="btn btn-default register" onclick="storeUsrLocaly()">Submit</button>
 					</form>
-				<!-- End Of content here -->
+				 
+				<!-- End Of main content here -->
 				</div>
 
 				<footer class="bg-yellow">
@@ -212,95 +216,8 @@
 				</footer>
 		</div>
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="Bootstrap3/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>	
-		<script>
-
-				// logic for alert show
-				var alertCalled = false;
-			  $('#avatarInfo').on('click', function () {
-			   	if (!alertCalled) {
-			   		$( ".avatarAlert" ).show();
-			   		alertCalled = true;
-			   		console.log('Alert shown');
-			   	};
-			  });
-
-
-			  // selection component class construction
-			  var selectionComponent = function (idStr,imgArray) {
-			  			this.idStr = idStr;
-			  			this.indexVal = 0;
-			  			this.imgArray = imgArray;
-			  };
-			  var avatarComponent = new selectionComponent('avatar',["EarthNinja.png","LifeNinja.png","FireNinja.png","WaterNinja.png"]);
-			  var crestComponent = new selectionComponent('crest',["ava1.png","ava2.png","ava3.png","ava4.png"]);
-
-			  // Logic to handle Avatar Selection
-			  $('#avatarPlus').on('click', function(){
-			  	changeComponent(true, avatarComponent);
-			  });
-
-			  $('#avatarMinus').on('click', function(){
-			  	changeComponent(false,avatarComponent);
-				});
-
-			// Logic to handle Crest Selection
-			  $('#crestPlus').on('click', function(){
-			  	changeComponent(true, crestComponent);
-			  });
-
-			  $('#crestMinus').on('click', function(){
-			  	changeComponent(false,crestComponent);
-				});			  
-
-			  // this function handles swapping display and image values for the image 
-			  function changeComponent(plus, component) {
-
-			  	if (!component.imgArray || !component.idStr) {
-			  		throw new Error('Vital params not set!');
-			  	};
-
-			  	if (plus) component.indexVal++;
-			  	else component.indexVal--;
-
-			  	console.log('Index: ' + component.indexVal);
-
-			  	//check if state needs toggled
-			  	var plusID = '#'+ component.idStr +'Plus';
-			  	if (component.indexVal >= component.imgArray.length -1) {
-			  			$(plusID).prop('disabled', true);
-			  	}
-			  	else {
-			  			$(plusID).prop('disabled', false);
-			  	}
-
-			  	// check if avatarMinus state needs toggled
-			  	var minusID = '#'+ component.idStr +'Minus';
-			  	if (component.indexVal <= 0 ) {
-			  			$(minusID).prop('disabled', true);
-			  	}
-			  	else {
-			  			$(minusID).prop('disabled', false);
-			  	}
-
-			  	// Update display name of current avatar
-			  	var currentImg = component.imgArray[component.indexVal];
-			  	var imgNameStr = new String(currentImg);
-			  	imgNameStr = imgNameStr.replace('.png','');
-			  	$('#'+component.idStr +'Info').text(imgNameStr);
-
-			  	// Update avatar Display Img src
-			  	var newSrc = 'assets/' + currentImg;
-			  	$('#'+component.idStr +'Img').attr('src', newSrc);
-			  	console.log(newSrc);
-
-			  };
-
-		</script>
-		
-	<!-- A script that stores the users data localy-->
-	<script src="js/storeUsrLocaly.js"></script>
 
 	</body>
 </html>
