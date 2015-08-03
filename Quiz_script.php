@@ -14,10 +14,9 @@
 	<title>Econ Ninja template</title>
 	<!-- Global stylesheet to reset page style for common starting point on each browser -->
 	<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css"-->
 	<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
 	<link rel="stylesheet" type="text/css" href="css/Global.css">
-	<!-- Styling for registration -->
-	<link rel="stylesheet" type="text/css" href="css/registration.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
 
 		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
@@ -25,14 +24,16 @@
 		<link rel="stylesheet" media="only screen and (max-width: 700px)" type="text/css" href="css/learderboard_styleMobile.css">
 		<link rel="stylesheet" media="only screen and (min-width: 700px)" type="text/css" href="css/learderboard_style.css">
 		
+		
 	</head>
 	<body>
 		<div class="container-fluid">	
 
 				<header class="bg-greenDark">
-					
+				
 				</header>
-	<div class="navbar navbar-default">
+
+				<div class="navbar navbar-default">
 				    <div class="container-fluid bg-cream">
 
 				      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -75,9 +76,9 @@
 				  </div> <!-- Close nav collapse -->
 				</div>	 <!-- Close container fluid -->
 
-				<div class="mainContent container-fluid"> 
-				<!-- Start of context sensitive content here. Edit after this line -->
-				
+				<div class="mainContent"> 
+				<!-- Start of content here. Edit after -->
+		
 		<!--
 *	Author:	Declan Finnerty
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
@@ -139,7 +140,8 @@
 
 ?>
 
-				<!-- End Of context sensitive content here. -->
+
+				<!-- End Of main content here -->
 				</div>
 
 				<footer class="bg-yellow">
@@ -147,12 +149,8 @@
 				</footer>
 		</div>
 
-		<script src="Bootstrap3/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>	
-		<script>
-		// Enter any javascript here
-
-		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="Bootstrap3/js/bootstrap.min.js"></script>	
 
 	</body>
 </html>

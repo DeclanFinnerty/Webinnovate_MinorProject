@@ -1,5 +1,5 @@
 <!--
-*	Author:	Robert Hunter
+*	Author: Declan Finnerty and	Robert Hunter
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW
 *	Date	:	12/07/15
 *	Ref:	
@@ -14,20 +14,24 @@
 	<title>Econ Ninja template</title>
 	<!-- Global stylesheet to reset page style for common starting point on each browser -->
 	<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css"-->
 	<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
 	<link rel="stylesheet" type="text/css" href="css/Global.css">
+	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
+
 	<!-- Styling for registration -->
 	<link rel="stylesheet" type="text/css" href="css/registration.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
-
+		
 	</head>
 	<body>
-		<div class="container-fluid">	
+		<div class="container-fluid">
 
 				<header class="bg-greenDark">
-					
+				
 				</header>
-	<div class="navbar navbar-default">
+
+				<div class="navbar navbar-default">
 				    <div class="container-fluid bg-cream">
 
 				      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -70,10 +74,9 @@
 				  </div> <!-- Close nav collapse -->
 				</div>	 <!-- Close container fluid -->
 
-				<div class="mainContent container-fluid"> 
-				<!-- Hey declan. The mainContent div is where the page specific content will be located. Editing anything outside of this section could break the standard layout  elements of the site -->
+				<div class="mainContent"> 
 				<!-- Start of content here. Edit after -->
-				<h1 class="register"> Become an Eco Ninja!</h1>
+			<h1 class="register"> Become an Eco Ninja!</h1>
 
 
 				<!--- Form inputs -->
@@ -204,7 +207,8 @@
 					 
 					  <button type="submit" class="btn btn-default register" onclick="storeUsrLocaly()">Submit</button>
 					</form>
-				<!-- End Of content here -->
+
+				<!-- End Of main content here -->
 				</div>
 
 				<footer class="bg-yellow">
@@ -212,9 +216,9 @@
 				</footer>
 		</div>
 
-		<script src="Bootstrap3/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>	
-		<script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="Bootstrap3/js/bootstrap.min.js"></script>	
+				<script>
 
 				// logic for alert show
 				var alertCalled = false;

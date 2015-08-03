@@ -1,5 +1,5 @@
 <!--
-*	Author:	Robert Hunter
+*	Author: Declan Finnerty and	Robert Hunter
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW
 *	Date	:	12/07/15
 *	Ref:	
@@ -14,25 +14,24 @@
 	<title>Econ Ninja template</title>
 	<!-- Global stylesheet to reset page style for common starting point on each browser -->
 	<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css"-->
 	<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
 	<link rel="stylesheet" type="text/css" href="css/Global.css">
+	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
+
 	<!-- Styling for registration -->
 	<link rel="stylesheet" type="text/css" href="css/registration.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
-
-		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
-
-		<link rel="stylesheet" media="only screen and (max-width: 700px)" type="text/css" href="css/learderboard_styleMobile.css">
-		<link rel="stylesheet" media="only screen and (min-width: 700px)" type="text/css" href="css/learderboard_style.css">
 		
 	</head>
 	<body>
-		<div class="container-fluid">	
+		<div class="container-fluid">
 
 				<header class="bg-greenDark">
-					
+				
 				</header>
-	<div class="navbar navbar-default">
+
+				<div class="navbar navbar-default">
 				    <div class="container-fluid bg-cream">
 
 				      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -75,12 +74,141 @@
 				  </div> <!-- Close nav collapse -->
 				</div>	 <!-- Close container fluid -->
 
-				<div class="mainContent container-fluid"> 
-				<!-- Start of context sensitive content here. Edit after this line -->
-				
-		
+				<div class="mainContent"> 
+				<!-- Start of content here. Edit after -->
+			<h1 class="register"> Become an Eco Ninja!</h1>
 
-				<!-- End Of context sensitive content here. -->
+
+				<!--- Form inputs -->
+				<div class="row">
+  					<div class="col-sm-12 col-md-6">
+						<form class="form" action="SignIn_script.php"  method="post">
+						  <div class="form-group">
+						    <label for="userName" class="register">Ninja Name</label>
+						    <input type="text" class="form-control" id="userName" name="userName" placeholder="Awesome ninja name">
+						  </div>
+
+					<!-- Select a county -->
+					<div class="form-group">
+					<label for="userCounty" class="register">County:</label>
+					<select id="userCounty" class="form-control"  name="userCounty" required>
+						<optgroup label="County" >
+							<option value="Antrim">Antrim</option>
+							<option value="Armagh">Armagh</option>
+							<option value="Carlow">Carlow</option>
+							<option value="Cavan">Cavan</option>
+							<option value="Clare">Clare</option>
+							<option value="Cork">Cork</option>
+							<option value="Derry">Derry</option>
+							<option value="Donegal">Donegal</option>
+							<option value="Down">Down</option>
+							<option value="Dublin">Dublin</option>
+							<option value="Fermanagh">Fermanagh</option>
+							<option value="Galway">Galway</option>
+							<option value="Kerry">Kerry</option>
+							<option value="Kildare">Kildare</option>
+							<option value="Kilkenny">Kilkenny</option>
+							<option value="Laois">Laois</option>
+							<option value="Leitrim">Leitrim</option>
+							<option value="Limerick">Limerick</option>
+							<option value="Longford">Longford</option>
+							<option value="Louth">Louth</option>
+							<option value="Mayo">Mayo</option>
+							<option value="Meath">Meath</option>
+							<option value="Monaghan">Monaghan</option>
+							<option value="Offaly">Offaly</option>
+							<option value="Roscommon">Roscommon</option>
+							<option value="Sligo">Sligo</option>
+							<option value="Tipperary">Tipperary</option>
+							<option value="Tyrone">Tyrone</option>
+							<option value="Waterford">Waterford</option>
+							<option value="Westmeath">Westmeath</option>
+							<option value="Wexford">Wexford</option>
+							<option value="Wicklow">Wicklow</option>
+						</optgroup>
+					</select>
+
+						  <div class="form-group">
+						    <label for="emailField" class="register">Email</label>
+						    <p class="help-block">Please use your parents email.</p>
+						    <input type="email" class="form-control" id="emailField" placeholder="Email">
+						  </div>
+						  <div class="form-group">
+						    <label for="passwordField" class="register">Password</label>
+						    <input type="password" class="form-control" id="passwordField" placeholder="*******">
+						  </div>
+					</div>
+				</div>
+
+				<!-- Avatar Input -->
+				<div class="col-sm-6 col-md-6"> <!-- Avatar Selection -->
+
+					    <div class="thumbnail">
+					      <h3 class="avatarGroup"> Select Avatar </h3>
+					      <img src="assets/EarthNinja.png" alt="avatar" id="avatarImg">
+					      <div class="caption avatarGroup">
+					        <p> User controls to selects </p>
+					        <p>
+					        	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+								  <button type="button" class="btn btn-default" id="avatarMinus" disabled>
+								  		<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+								  </button>
+								  
+								  <button type="button" class="btn btn-default" id="avatarInfo">
+								  		EarthNinja
+									</button>
+								  <button type="button" class="btn btn-default" id="avatarPlus">
+								  		<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+								  </button>
+								</div>
+					        </p>
+						        <!-- info alert, hidden by default-->
+								<div class="alert alert-info alert-dismissible avatarAlert" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <strong>Ninja Time!</strong> Use the arrows to select your ninja.
+								</div>
+					     	</div>
+					    </div> <!-- end thumbnail -->
+					   </div> <!-- end avatartSelection -->
+
+					  <div class="col-sm-6 col-md-6"> <!-- Crest Selection -->
+
+					    <div class="thumbnail">
+					      <h3 class="avatarGroup"> Select Crest </h3>
+					      <img src="assets/ava1.png" alt="avatar" id="crestImg">
+					      <div class="caption avatarGroup">
+					        <p> User controls to selects </p>
+					        <p>
+					        	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+								  <button type="button" class="btn btn-default" id="crestMinus" disabled>
+								  		<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+								  </button>
+								  
+								  <button type="button" class="btn btn-default" id="crestInfo">
+								  		ava1
+									</button>
+								  <button type="button" class="btn btn-default" id="crestPlus">
+								  		<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+								  </button>
+								</div>
+					        </p>
+						        <!-- info alert, hidden by default-->
+								<div class="alert alert-info alert-dismissible avatarAlert" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <strong>Ninja Time!</strong> Use the arrows to select your ninja.
+								</div>
+					     	</div>
+					    </div> <!-- end thumbnail -->
+					   </div> <!-- end crestSelection -->
+					   
+					  </div> <!-- end col -->
+
+
+					 
+					  <button type="submit" class="btn btn-default register" onclick="storeUsrLocaly()">Submit</button>
+					</form>
+
+				<!-- End Of main content here -->
 				</div>
 
 				<footer class="bg-yellow">
@@ -88,12 +216,95 @@
 				</footer>
 		</div>
 
-		<script src="Bootstrap3/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>	
-		<script>
-		// Enter any javascript here
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="Bootstrap3/js/bootstrap.min.js"></script>	
+				<script>
+
+				// logic for alert show
+				var alertCalled = false;
+			  $('#avatarInfo').on('click', function () {
+			   	if (!alertCalled) {
+			   		$( ".avatarAlert" ).show();
+			   		alertCalled = true;
+			   		console.log('Alert shown');
+			   	};
+			  });
+
+
+			  // selection component class construction
+			  var selectionComponent = function (idStr,imgArray) {
+			  			this.idStr = idStr;
+			  			this.indexVal = 0;
+			  			this.imgArray = imgArray;
+			  };
+			  var avatarComponent = new selectionComponent('avatar',["EarthNinja.png","LifeNinja.png","FireNinja.png","WaterNinja.png"]);
+			  var crestComponent = new selectionComponent('crest',["ava1.png","ava2.png","ava3.png","ava4.png"]);
+
+			  // Logic to handle Avatar Selection
+			  $('#avatarPlus').on('click', function(){
+			  	changeComponent(true, avatarComponent);
+			  });
+
+			  $('#avatarMinus').on('click', function(){
+			  	changeComponent(false,avatarComponent);
+				});
+
+			// Logic to handle Crest Selection
+			  $('#crestPlus').on('click', function(){
+			  	changeComponent(true, crestComponent);
+			  });
+
+			  $('#crestMinus').on('click', function(){
+			  	changeComponent(false,crestComponent);
+				});			  
+
+			  // this function handles swapping display and image values for the image 
+			  function changeComponent(plus, component) {
+
+			  	if (!component.imgArray || !component.idStr) {
+			  		throw new Error('Vital params not set!');
+			  	};
+
+			  	if (plus) component.indexVal++;
+			  	else component.indexVal--;
+
+			  	console.log('Index: ' + component.indexVal);
+
+			  	//check if state needs toggled
+			  	var plusID = '#'+ component.idStr +'Plus';
+			  	if (component.indexVal >= component.imgArray.length -1) {
+			  			$(plusID).prop('disabled', true);
+			  	}
+			  	else {
+			  			$(plusID).prop('disabled', false);
+			  	}
+
+			  	// check if avatarMinus state needs toggled
+			  	var minusID = '#'+ component.idStr +'Minus';
+			  	if (component.indexVal <= 0 ) {
+			  			$(minusID).prop('disabled', true);
+			  	}
+			  	else {
+			  			$(minusID).prop('disabled', false);
+			  	}
+
+			  	// Update display name of current avatar
+			  	var currentImg = component.imgArray[component.indexVal];
+			  	var imgNameStr = new String(currentImg);
+			  	imgNameStr = imgNameStr.replace('.png','');
+			  	$('#'+component.idStr +'Info').text(imgNameStr);
+
+			  	// Update avatar Display Img src
+			  	var newSrc = 'assets/' + currentImg;
+			  	$('#'+component.idStr +'Img').attr('src', newSrc);
+			  	console.log(newSrc);
+
+			  };
 
 		</script>
+		
+	<!-- A script that stores the users data localy-->
+	<script src="js/storeUsrLocaly.js"></script>
 
 	</body>
 </html>
