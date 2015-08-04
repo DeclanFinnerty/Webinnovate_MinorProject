@@ -46,6 +46,13 @@ a.topNav {
 	color: #197B30;
 	text-decoration: none;
 }
+a.topNav:hover {
+	color: orange;
+}
+
+a.topNav:active {
+	color: orange;
+}
 
 li.topNav:hover {
 	color: #FFF799;
