@@ -14,12 +14,72 @@ button.register:hover {
 	background-color: #197B305;
 }
 
+body {
+	background-color: #FFF799;
+}
+
+
 
 h1.register {
-	color: #197B30;
+	color: #3C2415;
+}
+
+.brown {
+	background-color: #3C2415;
+
+}
+
+.inputColor {
+	background-color: #F4DB97;
+}
+
+.greenHighlight {
+	background-color: #15D000;
+	color: white;
+}
+
+.greenHighlight:hover {
+	background-color: #15D000;
+	color: white;
+}
+
+.avatarSelHighlist {
+	background-color: #344610;
+	color: #344610;
+}
+
+.avatarSelHighlist:hover {
+	background-color: #344610;
+	color: #344610;
+}
+
+.avatarSelHighlist:active {
+	background-color: #344610;
+	color: #344610;
 }
 
 label.register {
 	color: #15D000;
 }
 
+	.profileInput {
+		padding: 25px 25px;
+		color: white;
+
+	}
+
+	.profileAvatar {
+		background-color: green;
+	}
+
+	.profileSubmit {
+		margin: 20px 20px;
+
+	}
+
+    .row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}

@@ -89,8 +89,8 @@
 	include 'ConnectToDB.php';
 
 	//Get user details from client
-	$usrName = $_POST['userName'];
-	$county = $_POST['userCounty'];
+	$usrName = $_POST['inputName1'];
+	$county = $_POST['inputCounty4'];
 	
 	//Put client details in database
 	$sql = "INSERT INTO user_info (UserName, County)

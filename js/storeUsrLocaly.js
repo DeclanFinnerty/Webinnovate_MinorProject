@@ -1,9 +1,9 @@
 //Store the userName and county into local storage
 function storeUsrLocaly()
 	{
-		var userNameInput= document.getElementById("userName");
-		localStorage.setItem("userName", userNameInput.value);
+		var userNameInput= document.getElementById("inputName1");
+		localStorage.setItem("inputName1", userNameInput.value);
 
-		var countyInput= document.getElementById("userCounty");
-		localStorage.setItem("userCounty", countyInput.value);
+		var countyInput= document.getElementById("inputCounty4");
+		localStorage.setItem("inputCounty4", countyInput.value);
 }
