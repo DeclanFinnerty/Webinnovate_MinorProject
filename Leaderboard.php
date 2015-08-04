@@ -1,6 +1,8 @@
 <!--
-*	Author:	Declan Finnerty
+*	Author: Declan Finnerty and	Robert Hunter
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW
+*	Date	:	12/07/15
+*	Ref:	
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -12,38 +14,73 @@
 	<title>Econ Ninja template</title>
 	<!-- Global stylesheet to reset page style for common starting point on each browser -->
 	<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css"-->
 	<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
 	<link rel="stylesheet" type="text/css" href="css/Global.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
+	
+
+		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
+
+		<link rel="stylesheet" media="only screen and (max-width: 700px)" type="text/css" href="css/learderboard_styleMobile.css">
+		<link rel="stylesheet" media="only screen and (min-width: 700px)" type="text/css" href="css/learderboard_style.css">
+		
+		
 	</head>
 	<body>
-		<div class="container-fluid">	
+		<div class="container-fluid">
 
 				<header class="bg-greenDark">
-					<img src="assets/imgs/Eco-Ninja-Header.png" class="img-responsive" alt="Eco Ninja Header">
+				
 				</header>
 
-				<nav class="topNav bg-cream">
-					<div class="container-fluid">
-					  <ul class="nav nav-pills navbar-right">
-					    <li role="presentation" class="active"><a class="topNav" href="index.php">Home</a></li>
-					    <li role="presentation"><a class="topNav" href="SignUp.html">SignUp</a></li>
-					    <li role="presentation"><a class="topNav" href="#">Profile</a></li>
-					    <li role="presentation"><a class="topNav" href="Quiz.html">Challenge</a></li>
-					    <li role="presentation"><a class="topNav" href="Leaderboard.php">Leaderboards</a></li>
-					    <li role="presentation"><a class="topNav" href="#">Blog</a></li>
-					    <li role="presentation"><a class="topNav" href="#">Gallery</a></li>
-					    <li role="presentation"><a class="topNav" href="#">About</a></li>
-					  </ul>
-				  	</div>
-				</nav>
+				<div class="navbar navbar-default">
+				    <div class="container-fluid bg-cream">
+
+				      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+				      <div class="navbar-header">
+					       	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				              <span class="sr-only">Toggle navigation</span>
+				              <span class="icon-bar"></span>
+				              <span class="icon-bar"></span>
+				              <span class="icon-bar"></span>
+	            			</button>
+	            		</div>
+				  	
+
+				  		<div id="navbar" class="navbar-collapse collapse">
+				            <ul class="nav navbar-nav navbar-right">
+					             <li role="presentation">
+							    	<a class="topNav" href="index.html">Home</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="registration.html">Profile</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="quiz.html">Challenge</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="Leaderboard.php">Leaderboards</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="#">Blog</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="#">Gallery</a>
+							    </li>
+							    <li role="presentation">
+							    	<a class="topNav" href="#">About</a>
+							    </li>
+				          </ul>
+				        </div>			  
+				
+				  </div> <!-- Close nav collapse -->
+				</div>	 <!-- Close container fluid -->
 
 				<div class="mainContent"> 
-
-				<!-- Hey declan. The mainContent div is where the page specific content will be located. Editing anything outside of this section could break the standard layout  elements of the site -->
 				<!-- Start of content here. Edit after -->
-					<div class="jumbotron mainContent">
-					  	
+
+						  	
 <!--
 *	Author:	Declan Finnerty
 *	Assignment:	Minor	Project	–	Eco Ninja, SxSW	
@@ -56,29 +93,9 @@
 *
 * 	Its not used in this version but it is functional
 -->
-<!DOCTYPE HTML>
-
-<html lang="en-us">
-
-	<head>
-		<meta charset="utf-8"/>
-		<title>Leaderboard</title>
 
 
-		<!-- Global stylesheet to reset page style for common starting point on each browser -->
-		<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
-		<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
-		<link rel="stylesheet" type="text/css" href="css/Global.css">
-		<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
-		
-		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
-
-		<link rel="stylesheet" media="only screen and (max-width: 1000px)" type="text/css" href="css/learderboard_styleMobile.css">
-		<link rel="stylesheet" media="only screen and (min-width: 1000px)" type="text/css" href="css/learderboard_style.css">
-
-	</head>
-
-	<body>
+	<div>
 
 		<div class="container">
 
@@ -88,13 +105,24 @@
 				$sqlget = "SELECT * FROM user_info ORDER BY -Score";
 				$sqldata = mysqli_query($db, $sqlget) or die('Error getting data from database');
 
+				//get the winner
+				$winner = mysqli_fetch_array($sqldata, MYSQL_ASSOC);
+
+				//Congradulate the winer in the heading
+				echo "<div id='leaderboardHeading'><h2 id='leaderboardH2'> Congratulations ";
+				echo $winner['UserName'] . " you are leading </h2></div>";
+
+				//Add the headings for the table
 				echo "<table id='leaderboardTable'>";
-				echo "<tr><th>ID</th><th>UserName</th><th>County</th><th>Score</th></tr>";
+				echo "<tr><th>UserName</th><th>County</th><th>Score</th></tr>";
 
 				$count = 0;
-				while($row = mysqli_fetch_array($sqldata, MYSQL_ASSOC))
+				do //Add the winner to the table then loop and add the rest
 				{
-					$count += 1;
+					if ($count == 0) {
+						$row = $winner;
+					}
+
 					if(($count % 2) == 0) 
 					{
 						echo "<tr><td>";
@@ -104,8 +132,6 @@
 						echo "<tr class='altRow'><td>";
 					}
 
-					echo $row['ID'];
-					echo "</td><td>";
 					echo $row['UserName'];
 					echo "</td><td>";
 					echo $row['County'];
@@ -113,7 +139,9 @@
 					echo $row['Score'];
 					echo "</td></tr>";
 
-				}
+					$count += 1;
+
+				} while($row = mysqli_fetch_array($sqldata, MYSQL_ASSOC));
 
 				if($count == 0)
 				{
@@ -121,14 +149,13 @@
 				}
 
 				echo "</table>";
+				echo "<a class='mainContent' href='index.html'>Home</a>";
 
 			?>
 	</div>
-	</body>
+	</div>
 
-</html>
-					</div>
-				<!-- End Of content here -->
+				<!-- End Of main content here -->
 				</div>
 
 				<footer class="bg-yellow">
@@ -136,7 +163,8 @@
 				</footer>
 		</div>
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="Bootstrap3/js/bootstrap.min.js"></script>	
+
 	</body>
 </html>
-
