@@ -12,21 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  
 	<title>Econ Ninja template</title>
-	<!-- Global stylesheet to reset page style for common starting point on each browser -->
-	<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css">
 	<!--<link rel="stylesheet" type="text/css" href="css/GlobalDefaults.css"-->
 	<!-- The Global.css file has styling elements shared across site e.g. header, footer, nav, headings etc -->
 	<link rel="stylesheet" type="text/css" href="css/Global.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
 	</head>
 	<body>
-		<div class="container-fluid">	
-
-				<header class="bg-greenDark">
+		<header class="bg-greenDark">
 				
 				</header>
 
-				<div class="navbar navbar-default">
+				<div class="navbar navbar-default navbar-nomargin">
 				    <div class="container-fluid bg-cream">
 
 				      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -76,35 +72,43 @@
 					<div class="jumbotron">
 						<div class="container">
 						
-							<div class="row">
+							<div class="row"> <!-- Open Intro row -->
 
-								<div class="col-sm-12 col-md-12">
+								<div class="col-xs-12 center">
 							  	<h3 class="lead"> 
 									The Planet <b>EARTH</b> is the coolest place in the universe to live. It has been under <b>THREAT</b> for some time now. We need to take better care of it. With your <b>HELP</b> we will <b>SAVE</b> it.
 								</h3>
 
-							
-		  						<div class="col-sm-6 col-md-6">	
+							</div> <!-- / Intro row -->
+
+							<div class="row buttonRow1"> <!-- Open button 1 + 2 row -->
+		  					
+		  						<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-2 center facts">	
 			  							<a id="popoverBTN" class="btn btn-primary btn-lg mainContent" class="btn btn-primary btn-lg mainContent" class="btnMinContent" role="button" data-toggle="popover"> 
 			  								Fun Facts
 			  							</a>
-		  					<!--		
-		  					<button id="popoverBTN" type="button" class="btn btn-default popoverBTN" data-container="body" data-toggle="popover"> Fun Facts </button>-->
 		  						</div>
-		  						<div class="col-sm-6 col-md-6">
+		  						<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-2 center">
 		  							<a id="popoverProfileBtn"class="btn btn-primary btn-lg mainContent" class="btnMinContent"  href="registration.html" role="button"> Create Profile</a>
 		  						</div>
-		  						<div class="col-sm-6 col-md-6">
+		  					</div>
+
+		  					<!-- / button 1+2 row -->
+
+		  					<!-- Open Button 3+4 row -->
+
+		  					<div class="row">
+		  						<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-2 center">
 		  							<a class="btn btn-primary btn-lg mainContent" class="btnMinContent"  href="quiz.html" role="button"> Test Your Knowledge</a>
 		  						</div>
-		  						<div class="col-sm-6 col-md-6">
+		  						<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-2 center">
 		  							<a class="btn btn-primary btn-lg mainContent" class="btnMinContent"  href="#" role="button">
 		  							Climate change Video</a>
 		  						</div>	
 		  					</div>
 						
-						</div>
-					</div>
+						</div> <!-- close container -->
+					</div>		<!-- close jumborton -->
 
 				 
 				<!-- End Of main content here -->
@@ -141,9 +145,9 @@
 						return randomFactArray[randIDX];
 				}
 				function randomPos (){
-						var posArray = ['top','bottom'];
+						var posArray = ['top','right'];
 						var randIDX =  randomInt(0,4);
-						return posArray[randIDX];
+						return 'top';
 				}
 
 				$('#popoverBTN').popover({

@@ -19,13 +19,10 @@
 	<link rel="stylesheet" type="text/css" href="css/Global.css">
 	<link rel="stylesheet" type="text/css" href="Bootstrap3/css/bootstrap.min.css">
 	
-
 		<link rel="stylesheet" type="text/css" href="css/learderboard_style.css">
-
 		<link rel="stylesheet" media="only screen and (max-width: 700px)" type="text/css" href="css/learderboard_styleMobile.css">
 		<link rel="stylesheet" media="only screen and (min-width: 700px)" type="text/css" href="css/learderboard_style.css">
-		
-		
+			
 	</head>
 	<body>
 		<div class="container-fluid">

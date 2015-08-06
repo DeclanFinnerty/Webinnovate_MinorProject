@@ -30,7 +30,12 @@ header {
 	background-color: green;
 }
 
-a {
+ {
+	margin-bottom: -20px;
+}
+
+.buttonRow1 {
+	margin-bottom: 30px;
 }
 
 footer {
@@ -40,6 +45,14 @@ footer {
 
 nav.topNav {
 	min-height: 7.5vh;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: orange;
+}
+
+.center {
+	text-align: center;
 }
 
 a.topNav {
@@ -73,6 +86,7 @@ a.mainContent {
   border-radius: 22px;
   color: #197B30;
   padding: 10px 20px 10px 20px;
+  margin-bottom: 35px;
   border-style: none;
   font-size: 18px;
   text-decoration: none;
